@@ -65,5 +65,5 @@ _main:
 ;     ret
 
 ; COMPILATION
-; ~/.brew/bin/nasm -f macho main.s -o main.o
+; ~/.brew/bin/nasm -f macho64 main.s -o main.o
 ; ld main.o -macosx_version_min 10.8 -lSystem
