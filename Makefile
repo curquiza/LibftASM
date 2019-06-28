@@ -24,7 +24,7 @@ $(NAME) : $(OBJ)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.s
 	@mkdir -p $(OBJ_DIR)
-	@~/.brew/bin/nasm -f macho64 $< -o $@
+	@nasm -f macho64 $< -o $@
 	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
 $(C_EXEC): $(NAME) $(C_MAIN)
@@ -33,14 +33,16 @@ $(C_EXEC): $(NAME) $(C_MAIN)
 	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
 $(ASM_EXEC): $(NAME) $(ASM_MAIN)
-	@~/.brew/bin/nasm -f macho64 $(ASM_MAIN) -o $(ASM_MAIN_O)
+	@nasm -f macho64 $(ASM_MAIN) -o $(ASM_MAIN_O)
 	@ld $(ASM_MAIN_O) $(NAME) -macosx_version_min 10.8 -lSystem -o $(ASM_EXEC)
 	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
 run_c_tests: $(C_EXEC)
+	@printf "\nEXECUTION:\n"
 	@./$(C_EXEC)
 
 run_asm_tests: $(ASM_EXEC)
+	@printf "\nEXECUTION:\n"
 	@./$(ASM_EXEC)
 
 run_tests: $(C_EXEC) $(ASM_EXEC)

@@ -16,24 +16,18 @@ start:
 	call _main
 	ret
 
-; _ft_puts:		; ft_puts(int string_length, char *str)
-; 	push rbp
-; 	mov rbp, rsp
-; 	mov rdx, [rbp + 16]
-; 	mov rsi, rdi
-; 	mov rdi, STDOUT
-; 	mov rax, MACH_SYSCALL(WRITE)
-; 	syscall
-; 	mov rsp, rbp	; Restore the stack and rbp
-; 	pop rbp
-; 	ret
-
 _main:
 	push rbp
 	mov rbp, rsp
 	sub rsp, 16
-	push 23					; parameter
-	mov rdi, hello.msg		; parameter
+
+	; push 23					; parameter
+	; mov rdi, hello.msg		; parameter
+	; call _ft_puts
+
+	mov rdi, 23					; parameter
+	mov rsi, hello.msg			; parameter
 	call _ft_puts
+
 	leave
 	ret

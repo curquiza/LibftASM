@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 void	ft_puts(int len, char *str);
 
 int		main(void)
