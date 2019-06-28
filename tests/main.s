@@ -20,8 +20,10 @@ _main:
     push rbp
     mov rbp, rsp
     sub rsp, 16
-    mov rdi, STDOUT
-    lea rsi, [rel hello.string]
+    ; mov rdi, STDOUT
+    ; lea rsi, [rel hello.string]
+	mov edi, STDOUT
+	lea esi, [rel hello.string]
     mov rdx, hello.len
     mov rax, MACH_SYSCALL(WRITE)
     syscall
