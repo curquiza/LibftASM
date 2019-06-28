@@ -13,10 +13,10 @@ section .text
 _ft_puts:		; ft_puts(int string_length, char *str)
 	push rbp
 	mov rbp, rsp
-	; mov rdx, [rbp + 16]
-	; mov rsi, rdi
-	mov rdx, msg.len
-	mov rsi, msg.content
+	mov rdx, [rbp + 16]
+	mov rsi, rdi
+	; mov rdx, msg.len
+	; mov rsi, msg.content
 	mov rdi, STDOUT
 	mov rax, MACH_SYSCALL(WRITE)
 	syscall
