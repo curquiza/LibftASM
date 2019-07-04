@@ -16,6 +16,8 @@ ASM_MAIN = tests/asm_main.s
 ASM_MAIN_O = tests/asm_main.o
 ASM_EXEC = asm_tests
 
+NASM = /Users/curquiza/.brew/bin/nasm
+
 all : $(NAME)
 
 $(NAME) : $(OBJ)
@@ -24,7 +26,7 @@ $(NAME) : $(OBJ)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.s
 	@mkdir -p $(OBJ_DIR)
-	@nasm -f macho64 $< -o $@
+	@$(NASM) -f macho64 $< -o $@
 	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
 $(C_EXEC): $(NAME) $(C_MAIN)
@@ -33,7 +35,7 @@ $(C_EXEC): $(NAME) $(C_MAIN)
 	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
 $(ASM_EXEC): $(NAME) $(ASM_MAIN)
-	@nasm -f macho64 $(ASM_MAIN) -o $(ASM_MAIN_O)
+	@$(NASM) -f macho64 $(ASM_MAIN) -o $(ASM_MAIN_O)
 	@ld $(ASM_MAIN_O) $(NAME) -macosx_version_min 10.8 -lSystem -o $(ASM_EXEC)
 	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
