@@ -28,9 +28,9 @@ _ft_puts:		; ft_puts(int string_length, char *str)
 	; mov rax, MACH_SYSCALL(WRITE)
 	; syscall
 
+	mov rdx, rdi
 	mov rdi, STDOUT
 	; rsi est déjà égal à la chaine que l'on veut
-	mov rdx, rdi
 	mov rax, MACH_SYSCALL(WRITE)
 	syscall
 
