@@ -34,6 +34,7 @@ _ft_puts:		; ft_puts(int string_length, char *str)
 	mov rax, MACH_SYSCALL(WRITE)
 	syscall
 
-	mov rsp, rbp	; Restore the stack and rbp
-	pop rbp
-	ret
+	.end:
+		mov rsp, rbp	; Restore the stack and rbp
+		pop rbp
+		ret
