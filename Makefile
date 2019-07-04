@@ -17,6 +17,7 @@ ASM_MAIN_O = tests/asm_main.o
 ASM_EXEC = asm_tests
 
 NASM = /Users/curquiza/.brew/bin/nasm
+GCC = gcc -Wall -Wextra -Werror
 
 all : $(NAME)
 
@@ -30,8 +31,8 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.s
 	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
 $(C_EXEC): $(NAME) $(C_MAIN)
-	@gcc -c $(C_MAIN) -o $(C_MAIN_O)
-	@gcc $(C_MAIN_O) $(NAME) -o $(C_EXEC)
+	@$(GCC) -c $(C_MAIN) -o $(C_MAIN_O)
+	@$(GCC) $(C_MAIN_O) $(NAME) -o $(C_EXEC)
 	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
 $(ASM_EXEC): $(NAME) $(ASM_MAIN)

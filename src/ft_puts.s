@@ -2,10 +2,10 @@
 %define STDOUT					1
 %define WRITE					4
 
-section .data
-msg:
-	.content db "In ft_puts", 10 ; 10 = \n
-	.len equ $ - msg.content
+; section .data
+; msg:
+; 	.content db "In ft_puts", 10 ; 10 = \n
+; 	.len equ $ - msg.content
 
 section .text
 	global _ft_puts
