@@ -17,7 +17,8 @@ ASM_MAIN = tests/asm_main.s
 ASM_MAIN_O = tests/asm_main.o
 ASM_EXEC = asm_tests
 
-NASM = /Users/curquiza/.brew/bin/nasm
+# NASM = /Users/curquiza/.brew/bin/nasm
+NASM = nasm
 GCC = gcc -Wall -Wextra -Werror
 
 all : $(NAME)
