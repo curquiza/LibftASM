@@ -3,9 +3,10 @@
 #include <ctype.h>
 
 void	ft_bzero(void *s, size_t size);
+char	*ft_strcat(char *s1, char *s2);
 int		ft_isalpha(char c);
 int		ft_isdigit(char c);
-char	*ft_strcat(char *s1, char *s2);
+int		ft_isalnum(char c);
 void	ft_puts(int len, char *str);
 
 int		ft_strlen(char *s);
@@ -72,7 +73,7 @@ int		main(void)
 	fprintf(stdout, "ft_isalpha('9') == isalpha('9') => %s\n", ft_isalpha('9') == isalpha('9') ? "YES" : "NO");
 
 	init(s, s1, s2, empty, empty2);
-	fprintf(stdout, "\nFT_ISALPHA\n");
+	fprintf(stdout, "\nFT_ISDIGIT\n");
 	fprintf(stdout, "ft_isdigit('f') == isdigit('f') => %s\n", ft_isdigit('f') == isdigit('f') ? "YES" : "NO");
 	fprintf(stdout, "ft_isdigit('0') == isdigit('0') => %s\n", ft_isdigit('0') == isdigit('0') ? "YES" : "NO");
 	fprintf(stdout, "ft_isdigit('1') == isdigit('1') => %s\n", ft_isdigit('1') == isdigit('1') ? "YES" : "NO");
@@ -81,6 +82,18 @@ int		main(void)
 	fprintf(stdout, "ft_isdigit(0) == isdigit(0) => %s\n", ft_isdigit(0) == isdigit(0) ? "YES" : "NO");
 	fprintf(stdout, "ft_isdigit('|') == isdigit('|') => %s\n", ft_isdigit('|') == isdigit('|') ? "YES" : "NO");
 	fprintf(stdout, "ft_isdigit('*') == isdigit('*') => %s\n", ft_isdigit('*') == isdigit('*') ? "YES" : "NO");
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_ISALNUM\n");
+	fprintf(stdout, "ft_isalnum('a') == isalnum('a') => %s\n", ft_isalnum('a') == isalnum('a') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum('Z') == isalnum('Z') => %s\n", ft_isalnum('Z') == isalnum('Z') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum('c') == isalnum('c') => %s\n", ft_isalnum('c') == isalnum('c') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum('^') == isalnum('^') => %s\n", ft_isalnum('^') == isalnum('^') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum(0) == isalnum(0) => %s\n", ft_isalnum(0) == isalnum(0) ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum('}') == isalnum('}') => %s\n", ft_isalnum('}') == isalnum('}') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum('*') == isalnum('*') => %s\n", ft_isalnum('*') == isalnum('*') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum('9') == isalnum('9') => %s\n", ft_isalnum('9') == isalnum('9') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum('1') == isalnum('1') => %s\n", ft_isalnum('1') == isalnum('1') ? "YES" : "NO");
 
 	return 0;
 }
