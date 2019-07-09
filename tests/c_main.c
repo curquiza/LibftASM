@@ -1,44 +1,61 @@
 #include <stdio.h>
 #include <string.h>
 
-void	ft_puts(int len, char *str);
 void	ft_bzero(void *s, size_t size);
 char	*ft_strcat(char *s1, char *s2);
+void	ft_puts(int len, char *str);
+
 int		ft_strlen(char *s);
 
-int		main(void)
+void	init(char *s, char *s1, char *s2, char *empty, char *empty2)
 {
-	char empty[1];
-	empty[0] = '\0';
-
-	fprintf(stdout, "\nFT_PUTS\n");
-	ft_puts(23, "Hello World in main.c!\n");
-
-	fprintf(stdout, "\nFT_BZERO\n");
-	char s[4];
+	empty[0] = 0;
+	empty2[0] = 0;
+	empty2[1] = 0;
+	empty2[2] = 0;
 	s[0] = 'l';
 	s[1] = 'o';
 	s[2] = 'l';
 	s[3] = '\0';
-	fprintf(stdout, "before ft_bzero = %s\n", s);
-	ft_bzero(s, 0);
-	fprintf(stdout, "after ft_bzero = %s\n", s);
-
-	fprintf(stdout, "\nFT_STRCAT\n");
-	char s1[4];
 	s1[0] = 'y';
 	s1[1] = 'o';
 	s1[2] = '\0';
 	s1[3] = '\0';
-	char s2[2];
 	s2[0] = '2';
 	s2[1] = '\0';
-	// fprintf(stdout, "ft_strcat(\"lol\", \"2\") = %s\n", ft_strcat(s1, s2));
+}
 
+int		main(void)
+{
+	char empty[1];
+	char empty2[3];
+	char s[4];
+	char s1[4];
+	char s2[2];
+
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_PUTS\n");
+	ft_puts(23, "Hello World in main.c!\n");
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_BZERO\n");
+	fprintf(stdout, "Before ft_bzero = %s\n", s);
+	ft_bzero(s, 1);
+	fprintf(stdout, "After ft_bzero = %s\n", s);
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_STRCAT\n");
+	fprintf(stdout, "ft_strcat(empty, empty2) = %s\n", ft_strcat(empty, empty2));
+	fprintf(stdout, "ft_strcat(\"lol\", \"2\") = %s\n", ft_strcat(s1, s2));
+	fprintf(stdout, "ft_strcat(empty2, s2) = %s\n", ft_strcat(empty2, s2));
+
+	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_STRLEN\n");
 	fprintf(stdout, "ft_strlen(s) = %d\n", ft_strlen(s));
 	fprintf(stdout, "ft_strlen(s2) = %d\n", ft_strlen(s2));
 	fprintf(stdout, "ft_strlen(empty) = %d\n", ft_strlen(empty));
+	fprintf(stdout, "ft_strlen(empty2) = %d\n", ft_strlen(empty2));
 
 	return 0;
 }
