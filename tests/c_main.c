@@ -4,9 +4,10 @@
 
 void	ft_bzero(void *s, size_t size);
 char	*ft_strcat(char *s1, char *s2);
-int		ft_isalpha(char c);
-int		ft_isdigit(char c);
-int		ft_isalnum(char c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
 void	ft_puts(int len, char *str);
 
 int		ft_strlen(char *s);
@@ -94,6 +95,18 @@ int		main(void)
 	fprintf(stdout, "ft_isalnum('*') == isalnum('*') => %s\n", ft_isalnum('*') == isalnum('*') ? "YES" : "NO");
 	fprintf(stdout, "ft_isalnum('9') == isalnum('9') => %s\n", ft_isalnum('9') == isalnum('9') ? "YES" : "NO");
 	fprintf(stdout, "ft_isalnum('1') == isalnum('1') => %s\n", ft_isalnum('1') == isalnum('1') ? "YES" : "NO");
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_ISALNUM\n");
+	fprintf(stdout, "ft_isascii('c') == isascii('c') => %s\n", ft_isascii('c') == isascii('c') ? "YES" : "NO");
+	fprintf(stdout, "ft_isascii('9') == isascii('9') => %s\n", ft_isascii('9') == isascii('9') ? "YES" : "NO");
+	fprintf(stdout, "ft_isascii('^') == isascii('^') => %s\n", ft_isascii('^') == isascii('^') ? "YES" : "NO");
+	fprintf(stdout, "ft_isascii(-1) == isascii(-1) => %s\n", ft_isascii(-1) == isascii(-1) ? "YES" : "NO");
+	fprintf(stdout, "ft_isascii(120) == isascii(120) => %s\n", ft_isascii(120) == isascii(120) ? "YES" : "NO");
+	fprintf(stdout, "ft_isascii(0) == isascii(0) => %s\n", ft_isascii(0) == isascii(0) ? "YES" : "NO");
+	fprintf(stdout, "ft_isascii(127) == isascii(127) => %s\n", ft_isascii(127) == isascii(127) ? "YES" : "NO");
+	fprintf(stdout, "ft_isascii(128) == isascii(128) => %s\n", ft_isascii(128) == isascii(128) ? "YES" : "NO");
+	fprintf(stdout, "ft_isascii(240) == isascii(240) => %s\n", ft_isascii(240) == isascii(240) ? "YES" : "NO");
 
 	return 0;
 }

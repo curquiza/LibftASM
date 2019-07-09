@@ -4,7 +4,7 @@
 section .text
 	global _ft_isdigit
 
-_ft_isdigit:		; ft_isdigit(char c)
+_ft_isdigit:		; ft_isdigit(int c)
 	push rbp
 	mov rbp, rsp
 	sub rsp, 16

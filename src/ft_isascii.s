@@ -2,22 +2,18 @@
 %define TRUE 		1
 
 section .text
-	global _ft_isalnum
-	extern _ft_isalpha
-	extern _ft_isdigit
+	global _ft_isascii
 
-_ft_isalnum:		; ft_isalnum(int c)
+_ft_isascii:		; ft_isascii(int c)
 	push rbp
 	mov rbp, rsp
 	sub rsp, 16
 
-	call _ft_isdigit
-	cmp rax, TRUE
-	je .true
-	call _ft_isalpha
-	cmp rax, TRUE
-	je .true
-	jmp .false
+	cmp rdi, 0
+	jl .false
+	cmp rdi, 127
+	jg .false
+	jmp .true
 
 	.false:
 		mov rax, FALSE
