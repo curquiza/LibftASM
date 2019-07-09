@@ -2,6 +2,11 @@
 #include <string.h>
 #include <ctype.h>
 
+#define GREEN	"\033[1;32m"
+#define RED		"\033[1;31m"
+#define YELLOW	"\033[1;33m"
+#define DEF		"\033[0m"
+
 void	ft_bzero(void *s, size_t size);
 char	*ft_strcat(char *s1, char *s2);
 int		ft_isalpha(int c);
@@ -12,6 +17,16 @@ int		ft_isprint(int c);
 void	ft_puts(int len, char *str);
 
 int		ft_strlen(char *s);
+
+int		g_score = 0;
+
+char	*assert_eq(int ret1, int ret2)
+{
+	if (ret1 == ret2)
+		return ("OK");
+	g_score++;
+	return ("NOPE !");
+}
 
 void	init(char *s, char *s1, char *s2, char *empty, char *empty2)
 {
@@ -65,69 +80,73 @@ int		main(void)
 
 	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISALPHA\n");
-	fprintf(stdout, "ft_isalpha('a') == isalpha('a') => %s\n", ft_isalpha('a') == isalpha('a') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalpha('Z') == isalpha('Z') => %s\n", ft_isalpha('Z') == isalpha('Z') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalpha('c') == isalpha('c') => %s\n", ft_isalpha('c') == isalpha('c') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalpha('^') == isalpha('^') => %s\n", ft_isalpha('^') == isalpha('^') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalpha(0) == isalpha(0) => %s\n", ft_isalpha(0) == isalpha(0) ? "YES" : "NO");
-	fprintf(stdout, "ft_isalpha('}') == isalpha('}') => %s\n", ft_isalpha('}') == isalpha('}') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalpha('*') == isalpha('*') => %s\n", ft_isalpha('*') == isalpha('*') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalpha('9') == isalpha('9') => %s\n", ft_isalpha('9') == isalpha('9') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalpha(-1) == isalpha(-1) => %s\n", ft_isalpha(-1) == isalpha(-1) ? "YES" : "NO");
-	fprintf(stdout, "ft_isalpha(128) == isalpha(128) => %s\n", ft_isalpha(128) == isalpha(128) ? "YES" : "NO");
+	fprintf(stdout, "ft_isalpha('a') == isalpha('a') => %s\n", assert_eq(ft_isalpha('a'), isalpha('a')));
+	fprintf(stdout, "ft_isalpha('Z') == isalpha('Z') => %s\n", assert_eq(ft_isalpha('Z'), isalpha('Z')));
+	fprintf(stdout, "ft_isalpha('c') == isalpha('c') => %s\n", assert_eq(ft_isalpha('c'), isalpha('c')));
+	fprintf(stdout, "ft_isalpha('^') == isalpha('^') => %s\n", assert_eq(ft_isalpha('^'), isalpha('^')));
+	fprintf(stdout, "ft_isalpha(0) == isalpha(0) => %s\n", assert_eq(ft_isalpha(0), isalpha(0)));
+	fprintf(stdout, "ft_isalpha('}') == isalpha('}') => %s\n", assert_eq(ft_isalpha('}'), isalpha('}')));
+	fprintf(stdout, "ft_isalpha('*') == isalpha('*') => %s\n", assert_eq(ft_isalpha('*'), isalpha('*')));
+	fprintf(stdout, "ft_isalpha('9') == isalpha('9') => %s\n", assert_eq(ft_isalpha('9'), isalpha('9')));
+	fprintf(stdout, "ft_isalpha(-1) == isalpha(-1) => %s\n", assert_eq(ft_isalpha(-1), isalpha(-1)));
+	fprintf(stdout, "ft_isalpha(128) == isalpha(128) => %s\n", assert_eq(ft_isalpha(128), isalpha(128)));
 
 	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISDIGIT\n");
-	fprintf(stdout, "ft_isdigit('f') == isdigit('f') => %s\n", ft_isdigit('f') == isdigit('f') ? "YES" : "NO");
-	fprintf(stdout, "ft_isdigit('0') == isdigit('0') => %s\n", ft_isdigit('0') == isdigit('0') ? "YES" : "NO");
-	fprintf(stdout, "ft_isdigit('1') == isdigit('1') => %s\n", ft_isdigit('1') == isdigit('1') ? "YES" : "NO");
-	fprintf(stdout, "ft_isdigit('9') == isdigit('9') => %s\n", ft_isdigit('9') == isdigit('9') ? "YES" : "NO");
-	fprintf(stdout, "ft_isdigit(':') == isdigit(':') => %s\n", ft_isdigit(':') == isdigit(':') ? "YES" : "NO");
-	fprintf(stdout, "ft_isdigit(0) == isdigit(0) => %s\n", ft_isdigit(0) == isdigit(0) ? "YES" : "NO");
-	fprintf(stdout, "ft_isdigit('|') == isdigit('|') => %s\n", ft_isdigit('|') == isdigit('|') ? "YES" : "NO");
-	fprintf(stdout, "ft_isdigit('*') == isdigit('*') => %s\n", ft_isdigit('*') == isdigit('*') ? "YES" : "NO");
-	fprintf(stdout, "ft_isdigit(-1) == isdigit(-1) => %s\n", ft_isdigit(-1) == isdigit(-1) ? "YES" : "NO");
-	fprintf(stdout, "ft_isdigit(128) == isdigit(128) => %s\n", ft_isdigit(128) == isdigit(128) ? "YES" : "NO");
+	fprintf(stdout, "ft_isdigit('f') == isdigit('f') => %s\n", assert_eq(ft_isdigit('f'), isdigit('f')));
+	fprintf(stdout, "ft_isdigit('0') == isdigit('0') => %s\n", assert_eq(ft_isdigit('0'), isdigit('0')));
+	fprintf(stdout, "ft_isdigit('1') == isdigit('1') => %s\n", assert_eq(ft_isdigit('1'), isdigit('1')));
+	fprintf(stdout, "ft_isdigit('9') == isdigit('9') => %s\n", assert_eq(ft_isdigit('9'), isdigit('9')));
+	fprintf(stdout, "ft_isdigit(':') == isdigit(':') => %s\n", assert_eq(ft_isdigit(':'), isdigit(':')));
+	fprintf(stdout, "ft_isdigit(0) == isdigit(0) => %s\n", assert_eq(ft_isdigit(0), isdigit(0)));
+	fprintf(stdout, "ft_isdigit('|') == isdigit('|') => %s\n", assert_eq(ft_isdigit('|'), isdigit('|')));
+	fprintf(stdout, "ft_isdigit('*') == isdigit('*') => %s\n", assert_eq(ft_isdigit('*'), isdigit('*')));
+	fprintf(stdout, "ft_isdigit(-1) == isdigit(-1) => %s\n", assert_eq(ft_isdigit(-1), isdigit(-1)));
+	fprintf(stdout, "ft_isdigit(128) == isdigit(128) => %s\n", assert_eq(ft_isdigit(128), isdigit(128)));
 
 	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISALNUM\n");
-	fprintf(stdout, "ft_isalnum('a') == isalnum('a') => %s\n", ft_isalnum('a') == isalnum('a') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalnum('Z') == isalnum('Z') => %s\n", ft_isalnum('Z') == isalnum('Z') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalnum('c') == isalnum('c') => %s\n", ft_isalnum('c') == isalnum('c') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalnum('^') == isalnum('^') => %s\n", ft_isalnum('^') == isalnum('^') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalnum(0) == isalnum(0) => %s\n", ft_isalnum(0) == isalnum(0) ? "YES" : "NO");
-	fprintf(stdout, "ft_isalnum('}') == isalnum('}') => %s\n", ft_isalnum('}') == isalnum('}') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalnum('*') == isalnum('*') => %s\n", ft_isalnum('*') == isalnum('*') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalnum('9') == isalnum('9') => %s\n", ft_isalnum('9') == isalnum('9') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalnum('1') == isalnum('1') => %s\n", ft_isalnum('1') == isalnum('1') ? "YES" : "NO");
-	fprintf(stdout, "ft_isalnum(-1) == isalnum(-1) => %s\n", ft_isalnum(-1) == isalnum(-1) ? "YES" : "NO");
-	fprintf(stdout, "ft_isalnum(128) == isalnum(128) => %s\n", ft_isalnum(128) == isalnum(128) ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum('a') == isalnum('a') => %s\n", assert_eq(ft_isalnum('a'), isalnum('a')));
+	fprintf(stdout, "ft_isalnum('Z') == isalnum('Z') => %s\n", assert_eq(ft_isalnum('Z'), isalnum('Z')));
+	fprintf(stdout, "ft_isalnum('c') == isalnum('c') => %s\n", assert_eq(ft_isalnum('c'), isalnum('c')));
+	fprintf(stdout, "ft_isalnum('^') == isalnum('^') => %s\n", assert_eq(ft_isalnum('^'), isalnum('^')));
+	fprintf(stdout, "ft_isalnum(0) == isalnum(0) => %s\n", assert_eq(ft_isalnum(0), isalnum(0)));
+	fprintf(stdout, "ft_isalnum('}') == isalnum('}') => %s\n", assert_eq(ft_isalnum('}'), isalnum('}')));
+	fprintf(stdout, "ft_isalnum('*') == isalnum('*') => %s\n", assert_eq(ft_isalnum('*'), isalnum('*')));
+	fprintf(stdout, "ft_isalnum('9') == isalnum('9') => %s\n", assert_eq(ft_isalnum('9'), isalnum('9')));
+	fprintf(stdout, "ft_isalnum('1') == isalnum('1') => %s\n", assert_eq(ft_isalnum('1'), isalnum('1')));
+	fprintf(stdout, "ft_isalnum(-1) == isalnum(-1) => %s\n", assert_eq(ft_isalnum(-1), isalnum(-1)));
+	fprintf(stdout, "ft_isalnum(128) == isalnum(128) => %s\n", assert_eq(ft_isalnum(128), isalnum(128)));
 
 	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISASCII\n");
-	fprintf(stdout, "ft_isascii('c') == isascii('c') => %s\n", ft_isascii('c') == isascii('c') ? "YES" : "NO");
-	fprintf(stdout, "ft_isascii('9') == isascii('9') => %s\n", ft_isascii('9') == isascii('9') ? "YES" : "NO");
-	fprintf(stdout, "ft_isascii('^') == isascii('^') => %s\n", ft_isascii('^') == isascii('^') ? "YES" : "NO");
-	fprintf(stdout, "ft_isascii(-1) == isascii(-1) => %s\n", ft_isascii(-1) == isascii(-1) ? "YES" : "NO");
-	fprintf(stdout, "ft_isascii(120) == isascii(120) => %s\n", ft_isascii(120) == isascii(120) ? "YES" : "NO");
-	fprintf(stdout, "ft_isascii(0) == isascii(0) => %s\n", ft_isascii(0) == isascii(0) ? "YES" : "NO");
-	fprintf(stdout, "ft_isascii(127) == isascii(127) => %s\n", ft_isascii(127) == isascii(127) ? "YES" : "NO");
-	fprintf(stdout, "ft_isascii(128) == isascii(128) => %s\n", ft_isascii(128) == isascii(128) ? "YES" : "NO");
-	fprintf(stdout, "ft_isascii(240) == isascii(240) => %s\n", ft_isascii(240) == isascii(240) ? "YES" : "NO");
+	fprintf(stdout, "ft_isascii('c') == isascii('c') => %s\n", assert_eq(ft_isascii('c'), isascii('c')));
+	fprintf(stdout, "ft_isascii('9') == isascii('9') => %s\n", assert_eq(ft_isascii('9'), isascii('9')));
+	fprintf(stdout, "ft_isascii('^') == isascii('^') => %s\n", assert_eq(ft_isascii('^'), isascii('^')));
+	fprintf(stdout, "ft_isascii(-1) == isascii(-1) => %s\n", assert_eq(ft_isascii(-1), isascii(-1)));
+	fprintf(stdout, "ft_isascii(120) == isascii(120) => %s\n", assert_eq(ft_isascii(120), isascii(120)));
+	fprintf(stdout, "ft_isascii(0) == isascii(0) => %s\n", assert_eq(ft_isascii(0), isascii(0)));
+	fprintf(stdout, "ft_isascii(127) == isascii(127) => %s\n", assert_eq(ft_isascii(127), isascii(127)));
+	fprintf(stdout, "ft_isascii(128) == isascii(128) => %s\n", assert_eq(ft_isascii(128), isascii(128)));
+	fprintf(stdout, "ft_isascii(240) == isascii(240) => %s\n", assert_eq(ft_isascii(240), isascii(240)));
 
 	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISPRINT\n");
-	fprintf(stdout, "ft_isprint('c') == isprint('c') => %s\n", ft_isprint('c') == isprint('c') ? "YES" : "NO");
-	fprintf(stdout, "ft_isprint('9') == isprint('9') => %s\n", ft_isprint('9') == isprint('9') ? "YES" : "NO");
-	fprintf(stdout, "ft_isprint('^') == isprint('^') => %s\n", ft_isprint('^') == isprint('^') ? "YES" : "NO");
-	fprintf(stdout, "ft_isprint(-1) == isprint(-1) => %s\n", ft_isprint(-1) == isprint(-1) ? "YES" : "NO");
-	fprintf(stdout, "ft_isprint(0) == isprint(0) => %s\n", ft_isprint(0) == isprint(0) ? "YES" : "NO");
-	fprintf(stdout, "ft_isprint(31) == isprint(31) => %s\n", ft_isprint(31) == isprint(31) ? "YES" : "NO");
-	fprintf(stdout, "ft_isprint(32) == isprint(32) => %s\n", ft_isprint(32) == isprint(32) ? "YES" : "NO");
-	fprintf(stdout, "ft_isprint(126) == isprint(126) => %s\n", ft_isprint(126) == isprint(126) ? "YES" : "NO");
-	fprintf(stdout, "ft_isprint(127) == isprint(127) => %s\n", ft_isprint(127) == isprint(127) ? "YES" : "NO");
-	fprintf(stdout, "ft_isprint(128) == isprint(128) => %s\n", ft_isprint(128) == isprint(128) ? "YES" : "NO");
-	fprintf(stdout, "ft_isprint(240) == isprint(240) => %s\n", ft_isprint(240) == isprint(240) ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint('c') == isprint('c') => %s\n", assert_eq(ft_isprint('c'), isprint('c')));
+	fprintf(stdout, "ft_isprint('9') == isprint('9') => %s\n", assert_eq(ft_isprint('9'), isprint('9')));
+	fprintf(stdout, "ft_isprint('^') == isprint('^') => %s\n", assert_eq(ft_isprint('^'), isprint('^')));
+	fprintf(stdout, "ft_isprint(-1) == isprint(-1) => %s\n", assert_eq(ft_isprint(-1), isprint(-1)));
+	fprintf(stdout, "ft_isprint(0) == isprint(0) => %s\n", assert_eq(ft_isprint(0), isprint(0)));
+	fprintf(stdout, "ft_isprint(31) == isprint(31) => %s\n", assert_eq(ft_isprint(31), isprint(31)));
+	fprintf(stdout, "ft_isprint(32) == isprint(32) => %s\n", assert_eq(ft_isprint(32), isprint(32)));
+	fprintf(stdout, "ft_isprint(126) == isprint(126) => %s\n", assert_eq(ft_isprint(126), isprint(126)));
+	fprintf(stdout, "ft_isprint(127) == isprint(127) => %s\n", assert_eq(ft_isprint(127), isprint(127)));
+	fprintf(stdout, "ft_isprint(128) == isprint(128) => %s\n", assert_eq(ft_isprint(128), isprint(128)));
+	fprintf(stdout, "ft_isprint(240) == isprint(240) => %s\n", assert_eq(ft_isprint(240), isprint(240)));
 
+	if (g_score != 0)
+		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);
+	else
+		fprintf(stdout, GREEN"\n0 fail !\n"DEF);
 	return 0;
 }
