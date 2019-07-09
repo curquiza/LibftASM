@@ -8,6 +8,7 @@ int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
+int		ft_isprint(int c);
 void	ft_puts(int len, char *str);
 
 int		ft_strlen(char *s);
@@ -72,6 +73,8 @@ int		main(void)
 	fprintf(stdout, "ft_isalpha('}') == isalpha('}') => %s\n", ft_isalpha('}') == isalpha('}') ? "YES" : "NO");
 	fprintf(stdout, "ft_isalpha('*') == isalpha('*') => %s\n", ft_isalpha('*') == isalpha('*') ? "YES" : "NO");
 	fprintf(stdout, "ft_isalpha('9') == isalpha('9') => %s\n", ft_isalpha('9') == isalpha('9') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalpha(-1) == isalpha(-1) => %s\n", ft_isalpha(-1) == isalpha(-1) ? "YES" : "NO");
+	fprintf(stdout, "ft_isalpha(128) == isalpha(128) => %s\n", ft_isalpha(128) == isalpha(128) ? "YES" : "NO");
 
 	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISDIGIT\n");
@@ -83,6 +86,8 @@ int		main(void)
 	fprintf(stdout, "ft_isdigit(0) == isdigit(0) => %s\n", ft_isdigit(0) == isdigit(0) ? "YES" : "NO");
 	fprintf(stdout, "ft_isdigit('|') == isdigit('|') => %s\n", ft_isdigit('|') == isdigit('|') ? "YES" : "NO");
 	fprintf(stdout, "ft_isdigit('*') == isdigit('*') => %s\n", ft_isdigit('*') == isdigit('*') ? "YES" : "NO");
+	fprintf(stdout, "ft_isdigit(-1) == isdigit(-1) => %s\n", ft_isdigit(-1) == isdigit(-1) ? "YES" : "NO");
+	fprintf(stdout, "ft_isdigit(128) == isdigit(128) => %s\n", ft_isdigit(128) == isdigit(128) ? "YES" : "NO");
 
 	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISALNUM\n");
@@ -95,9 +100,11 @@ int		main(void)
 	fprintf(stdout, "ft_isalnum('*') == isalnum('*') => %s\n", ft_isalnum('*') == isalnum('*') ? "YES" : "NO");
 	fprintf(stdout, "ft_isalnum('9') == isalnum('9') => %s\n", ft_isalnum('9') == isalnum('9') ? "YES" : "NO");
 	fprintf(stdout, "ft_isalnum('1') == isalnum('1') => %s\n", ft_isalnum('1') == isalnum('1') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum(-1) == isalnum(-1) => %s\n", ft_isalnum(-1) == isalnum(-1) ? "YES" : "NO");
+	fprintf(stdout, "ft_isalnum(128) == isalnum(128) => %s\n", ft_isalnum(128) == isalnum(128) ? "YES" : "NO");
 
 	init(s, s1, s2, empty, empty2);
-	fprintf(stdout, "\nFT_ISALNUM\n");
+	fprintf(stdout, "\nFT_ISASCII\n");
 	fprintf(stdout, "ft_isascii('c') == isascii('c') => %s\n", ft_isascii('c') == isascii('c') ? "YES" : "NO");
 	fprintf(stdout, "ft_isascii('9') == isascii('9') => %s\n", ft_isascii('9') == isascii('9') ? "YES" : "NO");
 	fprintf(stdout, "ft_isascii('^') == isascii('^') => %s\n", ft_isascii('^') == isascii('^') ? "YES" : "NO");
@@ -107,6 +114,20 @@ int		main(void)
 	fprintf(stdout, "ft_isascii(127) == isascii(127) => %s\n", ft_isascii(127) == isascii(127) ? "YES" : "NO");
 	fprintf(stdout, "ft_isascii(128) == isascii(128) => %s\n", ft_isascii(128) == isascii(128) ? "YES" : "NO");
 	fprintf(stdout, "ft_isascii(240) == isascii(240) => %s\n", ft_isascii(240) == isascii(240) ? "YES" : "NO");
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_ISPRINT\n");
+	fprintf(stdout, "ft_isprint('c') == isprint('c') => %s\n", ft_isprint('c') == isprint('c') ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint('9') == isprint('9') => %s\n", ft_isprint('9') == isprint('9') ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint('^') == isprint('^') => %s\n", ft_isprint('^') == isprint('^') ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint(-1) == isprint(-1) => %s\n", ft_isprint(-1) == isprint(-1) ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint(0) == isprint(0) => %s\n", ft_isprint(0) == isprint(0) ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint(31) == isprint(31) => %s\n", ft_isprint(31) == isprint(31) ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint(32) == isprint(32) => %s\n", ft_isprint(32) == isprint(32) ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint(126) == isprint(126) => %s\n", ft_isprint(126) == isprint(126) ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint(127) == isprint(127) => %s\n", ft_isprint(127) == isprint(127) ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint(128) == isprint(128) => %s\n", ft_isprint(128) == isprint(128) ? "YES" : "NO");
+	fprintf(stdout, "ft_isprint(240) == isprint(240) => %s\n", ft_isprint(240) == isprint(240) ? "YES" : "NO");
 
 	return 0;
 }
