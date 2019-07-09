@@ -4,6 +4,7 @@
 
 void	ft_bzero(void *s, size_t size);
 int		ft_isalpha(char c);
+int		ft_isdigit(char c);
 char	*ft_strcat(char *s1, char *s2);
 void	ft_puts(int len, char *str);
 
@@ -62,8 +63,24 @@ int		main(void)
 	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISALPHA\n");
 	fprintf(stdout, "ft_isalpha('a') == isalpha('a') => %s\n", ft_isalpha('a') == isalpha('a') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalpha('Z') == isalpha('Z') => %s\n", ft_isalpha('Z') == isalpha('Z') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalpha('c') == isalpha('c') => %s\n", ft_isalpha('c') == isalpha('c') ? "YES" : "NO");
 	fprintf(stdout, "ft_isalpha('^') == isalpha('^') => %s\n", ft_isalpha('^') == isalpha('^') ? "YES" : "NO");
 	fprintf(stdout, "ft_isalpha(0) == isalpha(0) => %s\n", ft_isalpha(0) == isalpha(0) ? "YES" : "NO");
+	fprintf(stdout, "ft_isalpha('}') == isalpha('}') => %s\n", ft_isalpha('}') == isalpha('}') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalpha('*') == isalpha('*') => %s\n", ft_isalpha('*') == isalpha('*') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalpha('9') == isalpha('9') => %s\n", ft_isalpha('9') == isalpha('9') ? "YES" : "NO");
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_ISALPHA\n");
+	fprintf(stdout, "ft_isdigit('f') == isdigit('f') => %s\n", ft_isdigit('f') == isdigit('f') ? "YES" : "NO");
+	fprintf(stdout, "ft_isdigit('0') == isdigit('0') => %s\n", ft_isdigit('0') == isdigit('0') ? "YES" : "NO");
+	fprintf(stdout, "ft_isdigit('1') == isdigit('1') => %s\n", ft_isdigit('1') == isdigit('1') ? "YES" : "NO");
+	fprintf(stdout, "ft_isdigit('9') == isdigit('9') => %s\n", ft_isdigit('9') == isdigit('9') ? "YES" : "NO");
+	fprintf(stdout, "ft_isdigit(':') == isdigit(':') => %s\n", ft_isdigit(':') == isdigit(':') ? "YES" : "NO");
+	fprintf(stdout, "ft_isdigit(0) == isdigit(0) => %s\n", ft_isdigit(0) == isdigit(0) ? "YES" : "NO");
+	fprintf(stdout, "ft_isdigit('|') == isdigit('|') => %s\n", ft_isdigit('|') == isdigit('|') ? "YES" : "NO");
+	fprintf(stdout, "ft_isdigit('*') == isdigit('*') => %s\n", ft_isdigit('*') == isdigit('*') ? "YES" : "NO");
 
 	return 0;
 }
