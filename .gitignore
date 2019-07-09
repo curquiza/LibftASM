@@ -5,3 +5,4 @@ libfts.a
 asm_tests
 c_tests
 .DS_Store
+.vscode/*

@@ -3,6 +3,7 @@ NAME = libfts.a
 SRC_DIR = src
 SRC = $(addprefix $(SRC_DIR)/, \
 	ft_bzero.s \
+	ft_isalpha.s \
 	ft_strcat.s \
 	ft_puts.s \
 	ft_strlen.s \

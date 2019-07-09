@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 void	ft_bzero(void *s, size_t size);
+int		ft_isalpha(char c);
 char	*ft_strcat(char *s1, char *s2);
 void	ft_puts(int len, char *str);
 
@@ -56,6 +58,12 @@ int		main(void)
 	fprintf(stdout, "ft_strlen(s2) = %d\n", ft_strlen(s2));
 	fprintf(stdout, "ft_strlen(empty) = %d\n", ft_strlen(empty));
 	fprintf(stdout, "ft_strlen(empty2) = %d\n", ft_strlen(empty2));
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_ISALPHA\n");
+	fprintf(stdout, "ft_isalpha('a') == isalpha('a') => %s\n", ft_isalpha('a') == isalpha('a') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalpha('^') == isalpha('^') => %s\n", ft_isalpha('^') == isalpha('^') ? "YES" : "NO");
+	fprintf(stdout, "ft_isalpha(0) == isalpha(0) => %s\n", ft_isalpha(0) == isalpha(0) ? "YES" : "NO");
 
 	return 0;
 }
