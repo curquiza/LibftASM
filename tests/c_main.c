@@ -16,7 +16,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-void	ft_puts(int len, char *str);
+int		ft_puts(char *str);
 
 int		ft_strlen(char *s);
 
@@ -56,10 +56,6 @@ int		main(void)
 	char s1[4];
 	char s2[2];
 
-
-	init(s, s1, s2, empty, empty2);
-	fprintf(stdout, "\nFT_PUTS\n");
-	ft_puts(23, "Hello World in main.c!\n");
 
 	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_BZERO\n");
@@ -171,6 +167,21 @@ int		main(void)
 	fprintf(stdout, "ft_tolower(127) == tolower(127) => %s\n", assert_eq(ft_tolower(127), tolower(127)));
 	fprintf(stdout, "ft_tolower(128) == tolower(128) => %s\n", assert_eq(ft_tolower(128), tolower(128)));
 	fprintf(stdout, "ft_tolower(240) == tolower(240) => %s\n", assert_eq(ft_tolower(240), tolower(240)));
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_PUTS\n");
+	fprintf(stdout, "Real puts:\n");
+	int ret1 = puts("Hello World in main.c!");
+	int ret2 = puts("");
+	int ret3 = puts(NULL);
+	fprintf(stdout, "ft_puts:\n");
+	int ft_ret1 = ft_puts("Hello World in main.c!");
+	int ft_ret2 = ft_puts("");
+	int ft_ret3 = ft_puts(NULL);
+	fprintf(stdout, "puts(\"Hello World in main.c!\\n\") == ft_puts(\"Hello World in main.c!\\n\") => %s\n", assert_eq(ret1, ft_ret1));
+	fprintf(stdout, "puts(\"\") == ft_puts(\"\") => %s\n", assert_eq(ret2, ft_ret2));
+	fprintf(stdout, "puts(NULL) == ft_puts(NUL) => %s\n", assert_eq(ret3, ft_ret3));
+
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);
