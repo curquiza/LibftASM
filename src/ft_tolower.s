@@ -1,14 +1,14 @@
 section .text
-	global _ft_toupper
+	global _ft_tolower
 
-_ft_toupper:		; ft_toupper(int c)
+_ft_tolower:		; ft_tolower(int c)
 	push rbp
 	mov rbp, rsp
 	sub rsp, 16
 
-	cmp rdi, 'a'
+	cmp rdi, 'A'
 	jl .no_change
-	cmp rdi, 'z'
+	cmp rdi, 'Z'
 	jg .no_change
 	jmp .to_upper
 
@@ -17,7 +17,7 @@ _ft_toupper:		; ft_toupper(int c)
 		jmp .end
 
 	.to_upper:
-		sub rdi, 32
+		add rdi, 32
 		mov rax, rdi
 		jmp .end
 

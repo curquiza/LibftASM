@@ -15,6 +15,7 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
+int		ft_tolower(int c);
 void	ft_puts(int len, char *str);
 
 int		ft_strlen(char *s);
@@ -157,6 +158,19 @@ int		main(void)
 	fprintf(stdout, "ft_toupper(127) == toupper(127) => %s\n", assert_eq(ft_toupper(127), toupper(127)));
 	fprintf(stdout, "ft_toupper(128) == toupper(128) => %s\n", assert_eq(ft_toupper(128), toupper(128)));
 	fprintf(stdout, "ft_toupper(240) == toupper(240) => %s\n", assert_eq(ft_toupper(240), toupper(240)));
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_TOLOWER\n");
+	fprintf(stdout, "ft_tolower('c') == tolower('c') => %s\n", assert_eq(ft_tolower('c'), tolower('c')));
+	fprintf(stdout, "ft_tolower('C') == tolower('C') => %s\n", assert_eq(ft_tolower('C'), tolower('C')));
+	fprintf(stdout, "ft_tolower('9') == tolower('9') => %s\n", assert_eq(ft_tolower('9'), tolower('9')));
+	fprintf(stdout, "ft_tolower('^') == tolower('^') => %s\n", assert_eq(ft_tolower('^'), tolower('^')));
+	fprintf(stdout, "ft_tolower(-1) == tolower(-1) => %s\n", assert_eq(ft_tolower(-1), tolower(-1)));
+	fprintf(stdout, "ft_tolower(0) == tolower(0) => %s\n", assert_eq(ft_tolower(0), tolower(0)));
+	fprintf(stdout, "ft_tolower(32) == tolower(32) => %s\n", assert_eq(ft_tolower(32), tolower(32)));
+	fprintf(stdout, "ft_tolower(127) == tolower(127) => %s\n", assert_eq(ft_tolower(127), tolower(127)));
+	fprintf(stdout, "ft_tolower(128) == tolower(128) => %s\n", assert_eq(ft_tolower(128), tolower(128)));
+	fprintf(stdout, "ft_tolower(240) == tolower(240) => %s\n", assert_eq(ft_tolower(240), tolower(240)));
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);
