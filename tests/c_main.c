@@ -14,6 +14,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_toupper(int c);
 void	ft_puts(int len, char *str);
 
 int		ft_strlen(char *s);
@@ -143,6 +144,19 @@ int		main(void)
 	fprintf(stdout, "ft_isprint(127) == isprint(127) => %s\n", assert_eq(ft_isprint(127), isprint(127)));
 	fprintf(stdout, "ft_isprint(128) == isprint(128) => %s\n", assert_eq(ft_isprint(128), isprint(128)));
 	fprintf(stdout, "ft_isprint(240) == isprint(240) => %s\n", assert_eq(ft_isprint(240), isprint(240)));
+
+	init(s, s1, s2, empty, empty2);
+	fprintf(stdout, "\nFT_TOUPPER\n");
+	fprintf(stdout, "ft_toupper('c') == toupper('c') => %s\n", assert_eq(ft_toupper('c'), toupper('c')));
+	fprintf(stdout, "ft_toupper('C') == toupper('C') => %s\n", assert_eq(ft_toupper('C'), toupper('C')));
+	fprintf(stdout, "ft_toupper('9') == toupper('9') => %s\n", assert_eq(ft_toupper('9'), toupper('9')));
+	fprintf(stdout, "ft_toupper('^') == toupper('^') => %s\n", assert_eq(ft_toupper('^'), toupper('^')));
+	fprintf(stdout, "ft_toupper(-1) == toupper(-1) => %s\n", assert_eq(ft_toupper(-1), toupper(-1)));
+	fprintf(stdout, "ft_toupper(0) == toupper(0) => %s\n", assert_eq(ft_toupper(0), toupper(0)));
+	fprintf(stdout, "ft_toupper(32) == toupper(32) => %s\n", assert_eq(ft_toupper(32), toupper(32)));
+	fprintf(stdout, "ft_toupper(127) == toupper(127) => %s\n", assert_eq(ft_toupper(127), toupper(127)));
+	fprintf(stdout, "ft_toupper(128) == toupper(128) => %s\n", assert_eq(ft_toupper(128), toupper(128)));
+	fprintf(stdout, "ft_toupper(240) == toupper(240) => %s\n", assert_eq(ft_toupper(240), toupper(240)));
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);

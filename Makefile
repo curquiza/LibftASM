@@ -9,6 +9,7 @@ SRC = $(addprefix $(SRC_DIR)/, \
 	ft_isalnum.s \
 	ft_isascii.s \
 	ft_isprint.s \
+	ft_toupper.s \
 	ft_puts.s \
 	ft_strlen.s \
 	)
