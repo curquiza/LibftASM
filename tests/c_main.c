@@ -16,9 +16,9 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_puts(char *str);
+int		ft_puts(const char *s);
 
-int		ft_strlen(char *s);
+size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *b, void *c, size_t len);
 
@@ -235,6 +235,7 @@ int		main(void)
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "\nFT_STRLEN\n");
 	fprintf(stdout, "strlen(\"lol\\n\") == ft_strlen(\"lol\\n\") => %s\n", assert_eq(strlen(s), ft_strlen(s)));
+	fprintf(stdout, "strlen(\"yo\") == ft_strlen(\"yo\") => %s\n", assert_eq(strlen(s1), ft_strlen(ft_s1)));
 	fprintf(stdout, "strlen(\"2\") == ft_strlen(\"2\") => %s\n", assert_eq(strlen(s2), ft_strlen(s2)));
 	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(""), ft_strlen("")));
 	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(empty2), ft_strlen(empty2)));
@@ -254,8 +255,6 @@ int		main(void)
 	fprintf(stdout, "memset(\"\", 'A', 2) == ft_memset(\"\", 'A', 2) => %s\n", assert_eq_str(memset(empty2, 'A', 2), ft_memset(ft_empty2, 'A', 2)));
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "memset(\"\", 0, 2) == ft_memset(\"\", 0, 2) => %s\n", assert_eq_str(memset(empty2, 0, 2), ft_memset(ft_empty2, 0, 2)));
-	// fprintf(stdout, "retour ft_memset = %s\n", ft_memset(s, 'a', 2));
-	// ft_memset(s, 'a', 2);
 
 	fprintf(stdout, "\nFT_MEMCPY\n");
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
