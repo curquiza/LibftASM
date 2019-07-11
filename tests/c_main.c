@@ -130,13 +130,6 @@ int		main(void)
 	fprintf(stdout, "strcat(\"yo\", \"2\") == ft_strcat(\"yo\", \"2\") => %s\n", assert_eq_str(strcat(s1, s2), ft_strcat(ft_s1, ft_s2)));
 	fprintf(stdout, "strcat(\"\", \"2\") == ft_strcat(\"\", \"2\") => %s\n", assert_eq_str(strcat(empty2, s2), ft_strcat(ft_empty2, ft_s2)));
 
-	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
-	fprintf(stdout, "\nFT_STRLEN\n");
-	fprintf(stdout, "strlen(\"lol\\n\") == ft_strlen(\"lol\\n\") => %s\n", assert_eq(strlen(s), ft_strlen(s)));
-	fprintf(stdout, "strlen(\"2\") == ft_strlen(\"2\") => %s\n", assert_eq(strlen(s2), ft_strlen(s2)));
-	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(""), ft_strlen("")));
-	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(empty2), ft_strlen(empty2)));
-
 	fprintf(stdout, "\nFT_ISALPHA\n");
 	fprintf(stdout, "ft_isalpha('a') == isalpha('a') => %s\n", assert_eq(ft_isalpha('a'), isalpha('a')));
 	fprintf(stdout, "ft_isalpha('Z') == isalpha('Z') => %s\n", assert_eq(ft_isalpha('Z'), isalpha('Z')));
@@ -235,6 +228,12 @@ int		main(void)
 	fprintf(stdout, "puts(\"\") == ft_puts(\"\") => %s\n", assert_eq(ret2, ft_ret2));
 	fprintf(stdout, "puts(NULL) == ft_puts(NULL) => %s\n", assert_eq(ret3, ft_ret3));
 
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "\nFT_STRLEN\n");
+	fprintf(stdout, "strlen(\"lol\\n\") == ft_strlen(\"lol\\n\") => %s\n", assert_eq(strlen(s), ft_strlen(s)));
+	fprintf(stdout, "strlen(\"2\") == ft_strlen(\"2\") => %s\n", assert_eq(strlen(s2), ft_strlen(s2)));
+	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(""), ft_strlen("")));
+	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(empty2), ft_strlen(empty2)));
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);
