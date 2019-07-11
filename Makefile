@@ -15,6 +15,7 @@ SRC = $(addprefix $(SRC_DIR)/, \
 	ft_strlen.s \
 	ft_memset.s \
 	ft_memcpy.s \
+	ft_strdup.s \
 	)
 
 OBJ_DIR = obj

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 #define GREEN	"\033[1;32m"
 #define RED		"\033[1;31m"
@@ -21,6 +22,7 @@ int		ft_puts(const char *s);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *b, void *c, size_t len);
+char	*ft_strdup(const char *s1);
 
 int		g_score = 0;
 
@@ -279,6 +281,13 @@ int		main(void)
 	fprintf(stdout, "memcpy(\"\", \"\", 1) == ft_memcpy(\"\", \"\", 1) => %s\n", assert_eq_str(memcpy(s, "", 1), ft_memcpy(ft_s, "", 1)));
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "memcpy(\"\", \"\", 0) == ft_memcpy(\"\", \"\", 0) => %s\n", assert_eq_str(memcpy(s, "", 0), ft_memcpy(ft_s, "", 0)));
+
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "\nFT_STRDUP\n");
+	char *new = ft_strdup(s);
+	// ft_puts(s);
+	free(new);
+
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);
