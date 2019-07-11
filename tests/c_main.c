@@ -30,53 +30,113 @@ char	*assert_eq(int ret1, int ret2)
 	return ("NOPE !");
 }
 
-void	init(char *s, char *s1, char *s2, char *empty, char *empty2)
+char	*assert_eq_str(char *str1, char *str2)
+{
+	if (strcmp(str1, str2) == 0)
+		return ("OK");
+	g_score++;
+	return ("NOPE !");
+}
+
+void	init(char *s, char *ft_s, char *s1, char *ft_s1, char *s2, char *ft_s2, char *empty, char *ft_empty, char *empty2, char *ft_empty2)
 {
 	empty[0] = 0;
+	ft_empty[0] = 0;
 	empty2[0] = 0;
 	empty2[1] = 0;
 	empty2[2] = 0;
+	ft_empty2[0] = 0;
+	ft_empty2[1] = 0;
+	ft_empty2[2] = 0;
 	s[0] = 'l';
 	s[1] = 'o';
 	s[2] = 'l';
 	s[3] = '\0';
+	ft_s[0] = 'l';
+	ft_s[1] = 'o';
+	ft_s[2] = 'l';
+	ft_s[3] = '\0';
 	s1[0] = 'y';
 	s1[1] = 'o';
 	s1[2] = '\0';
 	s1[3] = '\0';
+	ft_s1[0] = 'y';
+	ft_s1[1] = 'o';
+	ft_s1[2] = '\0';
+	ft_s1[3] = '\0';
 	s2[0] = '2';
 	s2[1] = '\0';
+	ft_s2[0] = '2';
+	ft_s2[1] = '\0';
 }
 
 int		main(void)
 {
 	char empty[1];
+	char ft_empty[1];
 	char empty2[3];
+	char ft_empty2[3];
 	char s[4];
+	char ft_s[4];
 	char s1[4];
+	char ft_s1[4];
 	char s2[2];
+	char ft_s2[2];
 
 
-	init(s, s1, s2, empty, empty2);
-	fprintf(stdout, "\nFT_BZERO\n");
-	fprintf(stdout, "Before ft_bzero = %s\n", s);
-	ft_bzero(s, 1);
-	fprintf(stdout, "After ft_bzero = %s\n", s);
+	{
+		fprintf(stdout, "\nFT_BZERO\n");
 
-	init(s, s1, s2, empty, empty2);
+		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+		fprintf(stdout, "bzero(\"lol\\n\", 4) and ft_bzero(\"lol\\n\", 4) ? ");
+		bzero(s, 4);
+		ft_bzero(ft_s, 4);
+		fprintf(stdout, "%s\n", assert_eq_str(s, ft_s));
+
+		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+		fprintf(stdout, "bzero(\"lol\\n\", 1) and ft_bzero(\"lol\\n\", 1) ? ");
+		bzero(s, 1);
+		ft_bzero(ft_s, 1);
+		fprintf(stdout, "%s\n", assert_eq_str(s, ft_s));
+
+		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+		fprintf(stdout, "bzero(\"lol\\n\", 0) and ft_bzero(\"lol\\n\", 0) ? ");
+		bzero(s, 0);
+		ft_bzero(ft_s, 0);
+		fprintf(stdout, "%s\n", assert_eq_str(s, ft_s));
+
+		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+		fprintf(stdout, "bzero(\"2\", 1) and ft_bzero(\"2\", 1) ? ");
+		bzero(s2, 1);
+		ft_bzero(ft_s2, 1);
+		fprintf(stdout, "%s\n", assert_eq_str(s2, ft_s2));
+
+		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+		fprintf(stdout, "bzero(\"2\", 0) and ft_bzero(\"2\", 0) ? ");
+		bzero(s2, 0);
+		ft_bzero(ft_s2, 0);
+		fprintf(stdout, "%s\n", assert_eq_str(s2, ft_s2));
+
+		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+		fprintf(stdout, "bzero(\"\", 0) and ft_bzero(\"\", 0) ? ");
+		bzero(empty, 0);
+		ft_bzero(ft_empty, 0);
+		fprintf(stdout, "%s\n", assert_eq_str(empty, ft_empty));
+	}
+
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "\nFT_STRCAT\n");
-	fprintf(stdout, "ft_strcat(empty, empty2) = %s\n", ft_strcat(empty, empty2));
-	fprintf(stdout, "ft_strcat(\"lol\", \"2\") = %s\n", ft_strcat(s1, s2));
-	fprintf(stdout, "ft_strcat(empty2, s2) = %s\n", ft_strcat(empty2, s2));
+	fprintf(stdout, "strcat(\"\", \"\") == ft_strcat(\"\", \"\") => %s\n", assert_eq_str(strcat(empty, empty2), ft_strcat(ft_empty, ft_empty2)));
+	fprintf(stdout, "strcat(\"yo\", \"2\") == ft_strcat(\"yo\", \"2\") => %s\n", assert_eq_str(strcat(s1, s2), ft_strcat(ft_s1, ft_s2)));
+	fprintf(stdout, "strcat(\"\", \"2\") == ft_strcat(\"\", \"2\") => %s\n", assert_eq_str(strcat(empty2, s2), ft_strcat(ft_empty2, ft_s2)));
 
-	init(s, s1, s2, empty, empty2);
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "\nFT_STRLEN\n");
-	fprintf(stdout, "ft_strlen(s) = %d\n", ft_strlen(s));
-	fprintf(stdout, "ft_strlen(s2) = %d\n", ft_strlen(s2));
-	fprintf(stdout, "ft_strlen(empty) = %d\n", ft_strlen(empty));
-	fprintf(stdout, "ft_strlen(empty2) = %d\n", ft_strlen(empty2));
+	fprintf(stdout, "strlen(\"lol\\n\") == ft_strlen(\"lol\\n\") => %s\n", assert_eq(strlen(s), ft_strlen(s)));
+	fprintf(stdout, "strlen(\"2\") == ft_strlen(\"2\") => %s\n", assert_eq(strlen(s2), ft_strlen(s2)));
+	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(""), ft_strlen("")));
+	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(empty2), ft_strlen(empty2)));
 
-	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISALPHA\n");
 	fprintf(stdout, "ft_isalpha('a') == isalpha('a') => %s\n", assert_eq(ft_isalpha('a'), isalpha('a')));
 	fprintf(stdout, "ft_isalpha('Z') == isalpha('Z') => %s\n", assert_eq(ft_isalpha('Z'), isalpha('Z')));
@@ -89,7 +149,6 @@ int		main(void)
 	fprintf(stdout, "ft_isalpha(-1) == isalpha(-1) => %s\n", assert_eq(ft_isalpha(-1), isalpha(-1)));
 	fprintf(stdout, "ft_isalpha(128) == isalpha(128) => %s\n", assert_eq(ft_isalpha(128), isalpha(128)));
 
-	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISDIGIT\n");
 	fprintf(stdout, "ft_isdigit('f') == isdigit('f') => %s\n", assert_eq(ft_isdigit('f'), isdigit('f')));
 	fprintf(stdout, "ft_isdigit('0') == isdigit('0') => %s\n", assert_eq(ft_isdigit('0'), isdigit('0')));
@@ -102,7 +161,6 @@ int		main(void)
 	fprintf(stdout, "ft_isdigit(-1) == isdigit(-1) => %s\n", assert_eq(ft_isdigit(-1), isdigit(-1)));
 	fprintf(stdout, "ft_isdigit(128) == isdigit(128) => %s\n", assert_eq(ft_isdigit(128), isdigit(128)));
 
-	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISALNUM\n");
 	fprintf(stdout, "ft_isalnum('a') == isalnum('a') => %s\n", assert_eq(ft_isalnum('a'), isalnum('a')));
 	fprintf(stdout, "ft_isalnum('Z') == isalnum('Z') => %s\n", assert_eq(ft_isalnum('Z'), isalnum('Z')));
@@ -116,7 +174,6 @@ int		main(void)
 	fprintf(stdout, "ft_isalnum(-1) == isalnum(-1) => %s\n", assert_eq(ft_isalnum(-1), isalnum(-1)));
 	fprintf(stdout, "ft_isalnum(128) == isalnum(128) => %s\n", assert_eq(ft_isalnum(128), isalnum(128)));
 
-	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISASCII\n");
 	fprintf(stdout, "ft_isascii('c') == isascii('c') => %s\n", assert_eq(ft_isascii('c'), isascii('c')));
 	fprintf(stdout, "ft_isascii('9') == isascii('9') => %s\n", assert_eq(ft_isascii('9'), isascii('9')));
@@ -128,7 +185,6 @@ int		main(void)
 	fprintf(stdout, "ft_isascii(128) == isascii(128) => %s\n", assert_eq(ft_isascii(128), isascii(128)));
 	fprintf(stdout, "ft_isascii(240) == isascii(240) => %s\n", assert_eq(ft_isascii(240), isascii(240)));
 
-	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_ISPRINT\n");
 	fprintf(stdout, "ft_isprint('c') == isprint('c') => %s\n", assert_eq(ft_isprint('c'), isprint('c')));
 	fprintf(stdout, "ft_isprint('9') == isprint('9') => %s\n", assert_eq(ft_isprint('9'), isprint('9')));
@@ -142,7 +198,6 @@ int		main(void)
 	fprintf(stdout, "ft_isprint(128) == isprint(128) => %s\n", assert_eq(ft_isprint(128), isprint(128)));
 	fprintf(stdout, "ft_isprint(240) == isprint(240) => %s\n", assert_eq(ft_isprint(240), isprint(240)));
 
-	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_TOUPPER\n");
 	fprintf(stdout, "ft_toupper('c') == toupper('c') => %s\n", assert_eq(ft_toupper('c'), toupper('c')));
 	fprintf(stdout, "ft_toupper('C') == toupper('C') => %s\n", assert_eq(ft_toupper('C'), toupper('C')));
@@ -155,7 +210,6 @@ int		main(void)
 	fprintf(stdout, "ft_toupper(128) == toupper(128) => %s\n", assert_eq(ft_toupper(128), toupper(128)));
 	fprintf(stdout, "ft_toupper(240) == toupper(240) => %s\n", assert_eq(ft_toupper(240), toupper(240)));
 
-	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_TOLOWER\n");
 	fprintf(stdout, "ft_tolower('c') == tolower('c') => %s\n", assert_eq(ft_tolower('c'), tolower('c')));
 	fprintf(stdout, "ft_tolower('C') == tolower('C') => %s\n", assert_eq(ft_tolower('C'), tolower('C')));
@@ -168,7 +222,6 @@ int		main(void)
 	fprintf(stdout, "ft_tolower(128) == tolower(128) => %s\n", assert_eq(ft_tolower(128), tolower(128)));
 	fprintf(stdout, "ft_tolower(240) == tolower(240) => %s\n", assert_eq(ft_tolower(240), tolower(240)));
 
-	init(s, s1, s2, empty, empty2);
 	fprintf(stdout, "\nFT_PUTS\n");
 	fprintf(stdout, "Real puts:\n");
 	int ret1 = puts("Hello World in main.c!");
@@ -180,7 +233,7 @@ int		main(void)
 	int ft_ret3 = ft_puts(NULL);
 	fprintf(stdout, "puts(\"Hello World in main.c!\\n\") == ft_puts(\"Hello World in main.c!\\n\") => %s\n", assert_eq(ret1, ft_ret1));
 	fprintf(stdout, "puts(\"\") == ft_puts(\"\") => %s\n", assert_eq(ret2, ft_ret2));
-	fprintf(stdout, "puts(NULL) == ft_puts(NUL) => %s\n", assert_eq(ret3, ft_ret3));
+	fprintf(stdout, "puts(NULL) == ft_puts(NULL) => %s\n", assert_eq(ret3, ft_ret3));
 
 
 	if (g_score != 0)
