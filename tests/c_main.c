@@ -8,7 +8,7 @@
 #define DEF		"\033[0m"
 
 void	ft_bzero(void *s, size_t size);
-char	*ft_strcat(char *s1, char *s2);
+char	*ft_strcat(char *restrict s1, const char *restrict s2);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -239,10 +239,23 @@ int		main(void)
 	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(""), ft_strlen("")));
 	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(empty2), ft_strlen(empty2)));
 
-	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "\nFT_MEMSET\n");
-	// fprintf(stdout, "retour ft_memset = %s\n", ft_memset(s, "c", 1));
-	// ft_memset("cle\n","c",2);
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"lol\\n\", 'a', 2) == ft_memset(\"lol\\n\", 'a', 2) => %s\n", assert_eq_str(memset(s, 'a', 2), ft_memset(ft_s, 'a', 2)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"lol\\n\", 'a', 4) == ft_memset(\"lol\\n\", 'a', 4) => %s\n", assert_eq_str(memset(s, 'a', 4), ft_memset(ft_s, 'a', 4)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"lol\\n\", 0, 1) == ft_memset(\"lol\\n\", 0, 1) => %s\n", assert_eq_str(memset(s, 0, 1), ft_memset(ft_s, 0, 1)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"lol\\n\", 'A', 0) == ft_memset(\"lol\\n\", 'A', 0) => %s\n", assert_eq_str(memset(s, 'A', 0), ft_memset(ft_s, 'A', 0)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"\", 'A', 0) == ft_memset(\"\", 'A', 0) => %s\n", assert_eq_str(memset(empty, 'A', 0), ft_memset(ft_empty, 'A', 0)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"\", 'A', 2) == ft_memset(\"\", 'A', 2) => %s\n", assert_eq_str(memset(empty2, 'A', 2), ft_memset(ft_empty2, 'A', 2)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"\", 0, 2) == ft_memset(\"\", 0, 2) => %s\n", assert_eq_str(memset(empty2, 0, 2), ft_memset(ft_empty2, 0, 2)));
+	// fprintf(stdout, "retour ft_memset = %s\n", ft_memset(s, 'a', 2));
+	// ft_memset(s, 'a', 2);
 
 	fprintf(stdout, "\nFT_MEMCPY\n");
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
