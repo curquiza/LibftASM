@@ -6,16 +6,19 @@ section .text
 _ft_memalloc:		; void *ft_memalloc(size_t size)
 	push rbp
 	mov rbp, rsp
-	sub rsp, 32
+	sub rsp, 32		; save 32 bits in function scope on stack
 
-	mov [rsp], rdi
+	mov [rsp], rdi	; stock size in stack from function scope
 
 	call _malloc
+	cmp rax, 0
+	je .end
 
 	mov rdi, rax
 	mov rsi, 'a'
 	mov rdx, [rsp]
 	call _ft_memset		; ft_memset return = ft_memalloc return
+	jmp .end
 
 	.end:
 		mov rsp, rbp	; Restore the stack and rbp
