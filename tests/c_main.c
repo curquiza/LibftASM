@@ -24,6 +24,8 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *b, void *c, size_t len);
 char	*ft_strdup(const char *s1);
 
+void	*ft_memalloc(size_t size);
+
 int		g_score = 0;
 
 char	*assert_eq(int ret1, int ret2)
@@ -88,6 +90,7 @@ int		main(void)
 	char ft_s1[4];
 	char s2[2];
 	char ft_s2[2];
+	char *str;
 
 
 	{
@@ -107,8 +110,8 @@ int		main(void)
 
 		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 		fprintf(stdout, "bzero(\"lol\\n\", 0) and ft_bzero(\"lol\\n\", 0) ? ");
-		bzero(s, 0);
-		ft_bzero(ft_s, 0);
+		bzero(s, (0));
+		ft_bzero(ft_s, (0));
 		fprintf(stdout, "%s\n", assert_eq_str(s, ft_s));
 
 		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
@@ -119,14 +122,14 @@ int		main(void)
 
 		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 		fprintf(stdout, "bzero(\"2\", 0) and ft_bzero(\"2\", 0) ? ");
-		bzero(s2, 0);
-		ft_bzero(ft_s2, 0);
+		bzero(s2, (0));
+		ft_bzero(ft_s2, (0));
 		fprintf(stdout, "%s\n", assert_eq_str(s2, ft_s2));
 
 		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 		fprintf(stdout, "bzero(\"\", 0) and ft_bzero(\"\", 0) ? ");
-		bzero(empty, 0);
-		ft_bzero(ft_empty, 0);
+		bzero(empty, (0));
+		ft_bzero(ft_empty, (0));
 		fprintf(stdout, "%s\n", assert_eq_str(empty, ft_empty));
 	}
 
@@ -250,9 +253,9 @@ int		main(void)
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "memset(\"lol\\n\", 0, 1) == ft_memset(\"lol\\n\", 0, 1) => %s\n", assert_eq_str(memset(s, 0, 1), ft_memset(ft_s, 0, 1)));
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
-	fprintf(stdout, "memset(\"lol\\n\", 'A', 0) == ft_memset(\"lol\\n\", 'A', 0) => %s\n", assert_eq_str(memset(s, 'A', 0), ft_memset(ft_s, 'A', 0)));
+	fprintf(stdout, "memset(\"lol\\n\", 'A', 0) == ft_memset(\"lol\\n\", 'A', 0) => %s\n", assert_eq_str(memset(s, 'A', (0)), ft_memset(ft_s, 'A', (0))));
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
-	fprintf(stdout, "memset(\"\", 'A', 0) == ft_memset(\"\", 'A', 0) => %s\n", assert_eq_str(memset(empty, 'A', 0), ft_memset(ft_empty, 'A', 0)));
+	fprintf(stdout, "memset(\"\", 'A', 0) == ft_memset(\"\", 'A', 0) => %s\n", assert_eq_str(memset(empty, 'A', (0)), ft_memset(ft_empty, 'A', (0))));
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "memset(\"\", 'A', 2) == ft_memset(\"\", 'A', 2) => %s\n", assert_eq_str(memset(empty2, 'A', 2), ft_memset(ft_empty2, 'A', 2)));
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
@@ -282,12 +285,16 @@ int		main(void)
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "memcpy(\"\", \"\", 0) == ft_memcpy(\"\", \"\", 0) => %s\n", assert_eq_str(memcpy(s, "", 0), ft_memcpy(ft_s, "", 0)));
 
-	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
-	fprintf(stdout, "\nFT_STRDUP\n");
-	char *new = ft_strdup(s);
-	// ft_puts(s);
-	free(new);
+	// init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	// fprintf(stdout, "\nFT_STRDUP\n");
+	// char *new = ft_strdup(s);
+	// // ft_puts(s);
+	// free(new);
 
+	fprintf(stdout, "\nFT_MEMALLOC\n");
+	str = ft_memalloc(4); fprintf(stdout, "ft_memalloc(4) => YES\n"); free(str);
+	str = ft_memalloc(1); fprintf(stdout, "ft_memalloc(1) => YES\n"); free(str);
+	str = ft_memalloc(0); fprintf(stdout, "ft_memalloc(0) => YES\n"); free(str);
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);

@@ -16,6 +16,7 @@ SRC = $(addprefix $(SRC_DIR)/, \
 	ft_memset.s \
 	ft_memcpy.s \
 	ft_strdup.s \
+	ft_memalloc.s \
 	)
 
 OBJ_DIR = obj
@@ -29,8 +30,8 @@ ASM_MAIN = tests/asm_main.s
 ASM_MAIN_O = tests/asm_main.o
 ASM_EXEC = asm_tests
 
-NASM = /Users/curquiza/.brew/bin/nasm
-# NASM = nasm
+# NASM = /Users/curquiza/.brew/bin/nasm
+NASM = nasm
 GCC = gcc -Wall -Wextra -Werror
 
 all : $(NAME)
