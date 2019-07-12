@@ -93,6 +93,7 @@ int		main(void)
 	char s2[2];
 	char ft_s2[2];
 	char *str;
+	char *ft_str;
 
 
 	{
@@ -287,11 +288,17 @@ int		main(void)
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "memcpy(\"\", \"\", 0) == ft_memcpy(\"\", \"\", 0) => %s\n", assert_eq_str(memcpy(s, "", 0), ft_memcpy(ft_s, "", 0)));
 
-	// init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
-	// fprintf(stdout, "\nFT_STRDUP\n");
-	// char *new = ft_strdup(s);
-	// // ft_puts(s);
-	// free(new);
+	fprintf(stdout, "\nFT_STRDUP\n");
+	str = ft_strdup("lol"); ft_str = strdup("lol");
+	fprintf(stdout, "strdup(\"lol\") == ft_strdup(\"lol\") => %s\n", assert_eq_str(str, ft_str));
+	free(str); free(ft_str);
+	str = ft_strdup(""); ft_str = strdup("");
+	fprintf(stdout, "strdup(\"\") == ft_strdup(\"\") => %s\n", assert_eq_str(str, ft_str));
+	free(str); free(ft_str);
+	str = ft_strdup("1"); ft_str = strdup("1");
+	fprintf(stdout, "strdup(\"1\") == ft_strdup(\"1\") => %s\n", assert_eq_str(str, ft_str));
+	free(str); free(ft_str);
+
 
 	fprintf(stdout, "\nFT_MEMALLOC\n");
 	str = ft_memalloc(4); fprintf(stdout, "ft_memalloc(4) => YES\n"); free(str);
