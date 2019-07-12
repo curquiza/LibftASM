@@ -1,7 +1,5 @@
 - corriger warning compilation
 - faire tests en asm
-- enlever les sub 16 pour la stack
-- deproteger le strlen ? car potentiellement c'est la fonction qui appelle strlen qui doit sauvegarder ses donnees hors registres = modifier ft_puts et ft_strcat
 
 
 Bonus :
