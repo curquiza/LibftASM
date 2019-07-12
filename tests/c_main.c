@@ -299,7 +299,6 @@ int		main(void)
 	fprintf(stdout, "strdup(\"1\") == ft_strdup(\"1\") => %s\n", assert_eq_str(str, ft_str));
 	free(str); free(ft_str);
 
-
 	fprintf(stdout, "\nFT_MEMALLOC\n");
 	str = ft_memalloc(4); fprintf(stdout, "ft_memalloc(4) => DONE\n"); free(str);
 	str = ft_memalloc(1); fprintf(stdout, "ft_memalloc(1) => DONE\n"); free(str);

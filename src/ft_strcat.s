@@ -6,7 +6,14 @@ _ft_strcat:		; ft_strcat(char *s1, char *s2)
 	push rbp
 	mov rbp, rsp
 
-	call _ft_strlen		; move len in rax
+	sub rsp, 128			; save 128bits in scope function
+	mov [rsp], rdi			; save s1
+	mov [rsp + 64], rsi		; save s2
+
+	call _ft_strlen			; len in rax
+
+	mov rdi, [rsp]			; restore s1
+	mov rsi, [rsp + 64]		; restore s2
 
 	.main_loop:
 		mov dh, byte[rsi]
