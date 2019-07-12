@@ -25,6 +25,7 @@ void	*ft_memcpy(void *b, void *c, size_t len);
 char	*ft_strdup(const char *s1);
 
 void	*ft_memalloc(size_t size);
+char	*ft_strnew(size_t size);
 
 int		g_score = 0;
 
@@ -295,6 +296,11 @@ int		main(void)
 	str = ft_memalloc(4); fprintf(stdout, "ft_memalloc(4) => YES\n"); free(str);
 	str = ft_memalloc(1); fprintf(stdout, "ft_memalloc(1) => YES\n"); free(str);
 	str = ft_memalloc(0); fprintf(stdout, "ft_memalloc(0) => YES\n"); free(str);
+
+	fprintf(stdout, "\nFT_strnew\n");
+	str = ft_strnew(4); fprintf(stdout, "ft_strnew(4) => YES\n"); free(str);
+	str = ft_strnew(1); fprintf(stdout, "ft_strnew(1) => YES\n"); free(str);
+	str = ft_strnew(0); fprintf(stdout, "ft_strnew(0) => YES\n"); free(str);
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);
