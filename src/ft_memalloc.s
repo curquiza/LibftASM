@@ -15,7 +15,7 @@ _ft_memalloc:		; void *ft_memalloc(size_t size)
 	je .end
 
 	mov rdi, rax
-	mov rsi, 'a'
+	mov rsi, 0
 	mov rdx, [rsp]
 	call _ft_memset		; ft_memset return = ft_memalloc return
 	jmp .end
