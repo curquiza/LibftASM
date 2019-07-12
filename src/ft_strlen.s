@@ -41,3 +41,4 @@ _ft_strlen:		; size_t strlen(const char *s);
 		pop rbp
 		ret
 
+; enlever push et pop rdi car ce n'est pas strlen qui doit s'adapter à ceux qui l'appelent
