@@ -4,7 +4,6 @@ section .text
 _ft_toupper:		; ft_toupper(int c)
 	push rbp
 	mov rbp, rsp
-	sub rsp, 16
 
 	cmp rdi, 'a'
 	jl .no_change
