@@ -299,16 +299,15 @@ int		main(void)
 	fprintf(stdout, "strdup(\"1\") == ft_strdup(\"1\") => %s\n", assert_eq_str(str, ft_str));
 	free(str); free(ft_str);
 
-
 	fprintf(stdout, "\nFT_MEMALLOC\n");
-	str = ft_memalloc(4); fprintf(stdout, "ft_memalloc(4) => YES\n"); free(str);
-	str = ft_memalloc(1); fprintf(stdout, "ft_memalloc(1) => YES\n"); free(str);
-	str = ft_memalloc(0); fprintf(stdout, "ft_memalloc(0) => YES\n"); free(str);
+	str = ft_memalloc(4); fprintf(stdout, "ft_memalloc(4) => DONE\n"); free(str);
+	str = ft_memalloc(1); fprintf(stdout, "ft_memalloc(1) => DONE\n"); free(str);
+	str = ft_memalloc(0); fprintf(stdout, "ft_memalloc(0) => DONE\n"); free(str);
 
 	fprintf(stdout, "\nFT_STRNEW\n");
-	str = ft_strnew(4); fprintf(stdout, "ft_strnew(4) => YES\n"); free(str);
-	str = ft_strnew(1); fprintf(stdout, "ft_strnew(1) => YES\n"); free(str);
-	str = ft_strnew(0); fprintf(stdout, "ft_strnew(0) => YES\n"); free(str);
+	str = ft_strnew(4); fprintf(stdout, "ft_strnew(4) => DONE\n"); free(str);
+	str = ft_strnew(1); fprintf(stdout, "ft_strnew(1) => DONE\n"); free(str);
+	str = ft_strnew(0); fprintf(stdout, "ft_strnew(0) => DONE\n"); free(str);
 
 	fprintf(stdout, "\nFT_STRCPY\n");
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);

@@ -21,6 +21,6 @@ _ft_memalloc:		; void *ft_memalloc(size_t size)
 	jmp .end
 
 	.end:
-		mov rsp, rbp	; Restore the stack and rbp
+		mov rsp, rbp	; Restore the scope
 		pop rbp
 		ret

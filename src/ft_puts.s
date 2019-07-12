@@ -25,17 +25,24 @@ _ft_puts:		; int ft_puts(char *str)
 	push rbp
 	mov rbp, rsp
 
+	sub rsp, 64		; save 64bits in function scope
+
 	cmp rdi, 0
 	je .null
 	jmp .puts
 
 	.null:
 		mov rdi, .null_str
+		jmp .puts
 
 	.puts:
+
+		mov [rsp], rdi		; save str
+
 		call _ft_strlen		; param: rdi
 
-		mov rsi, rax			; write str
+		mov rdi, [rsp]		; restore str
+		mov rsi, rax		; write str
 		call _ft_write
 
 		cmp rax, -1			; check return of write

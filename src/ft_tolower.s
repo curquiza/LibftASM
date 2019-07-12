@@ -4,7 +4,6 @@ section .text
 _ft_tolower:		; ft_tolower(int c)
 	push rbp
 	mov rbp, rsp
-	sub rsp, 16
 
 	cmp rdi, 'A'
 	jl .no_change

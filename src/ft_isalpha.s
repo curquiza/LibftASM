@@ -7,7 +7,6 @@ section .text
 _ft_isalpha:		; ft_isalpha(int c)
 	push rbp
 	mov rbp, rsp
-	sub rsp, 16
 
 	cmp rdi, 'A'
 	jl .false

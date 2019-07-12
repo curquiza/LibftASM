@@ -9,7 +9,6 @@ section .text
 _ft_isalnum:		; ft_isalnum(int c)
 	push rbp
 	mov rbp, rsp
-	sub rsp, 16
 
 	call _ft_isdigit
 	cmp rax, TRUE

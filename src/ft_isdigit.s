@@ -7,7 +7,6 @@ section .text
 _ft_isdigit:		; ft_isdigit(int c)
 	push rbp
 	mov rbp, rsp
-	sub rsp, 16
 
 	cmp rdi, '0'
 	jl .false
