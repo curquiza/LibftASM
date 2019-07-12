@@ -1,18 +1,12 @@
-; section .data
-; 	msg: db "strlen = %d", 10, 0
-
 section .text
 	global _ft_strcat
-	extern _printf
 	extern _ft_strlen
 
 _ft_strcat:		; ft_strcat(char *s1, char *s2)
 	push rbp
 	mov rbp, rsp
-	sub rsp, 16
 
-	mov rdi, rdi		; useless
-	call _ft_strlen
+	call _ft_strlen		; move len in rax
 
 	.main_loop:
 		mov dh, byte[rsi]

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 #define GREEN	"\033[1;32m"
 #define RED		"\033[1;31m"
@@ -8,7 +9,7 @@
 #define DEF		"\033[0m"
 
 void	ft_bzero(void *s, size_t size);
-char	*ft_strcat(char *s1, char *s2);
+char	*ft_strcat(char *restrict s1, const char *restrict s2);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -16,9 +17,16 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_puts(char *str);
+int		ft_puts(const char *s);
 
-int		ft_strlen(char *s);
+size_t	ft_strlen(const char *s);
+void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memcpy(void *b, void *c, size_t len);
+char	*ft_strdup(const char *s1);
+
+void	*ft_memalloc(size_t size);
+char	*ft_strnew(size_t size);
+char	*ft_strcpy(char * dst, const char * src);
 
 int		g_score = 0;
 
@@ -51,11 +59,13 @@ void	init(char *s, char *ft_s, char *s1, char *ft_s1, char *s2, char *ft_s2, cha
 	s[0] = 'l';
 	s[1] = 'o';
 	s[2] = 'l';
-	s[3] = '\0';
+	s[3] = '\n';
+	s[4] = '\0';
 	ft_s[0] = 'l';
 	ft_s[1] = 'o';
 	ft_s[2] = 'l';
-	ft_s[3] = '\0';
+	ft_s[3] = '\n';
+	ft_s[4] = '\0';
 	s1[0] = 'y';
 	s1[1] = 'o';
 	s1[2] = '\0';
@@ -76,12 +86,14 @@ int		main(void)
 	char ft_empty[1];
 	char empty2[3];
 	char ft_empty2[3];
-	char s[4];
-	char ft_s[4];
+	char s[5];
+	char ft_s[5];
 	char s1[4];
 	char ft_s1[4];
 	char s2[2];
 	char ft_s2[2];
+	char *str;
+	char *ft_str;
 
 
 	{
@@ -101,8 +113,8 @@ int		main(void)
 
 		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 		fprintf(stdout, "bzero(\"lol\\n\", 0) and ft_bzero(\"lol\\n\", 0) ? ");
-		bzero(s, 0);
-		ft_bzero(ft_s, 0);
+		bzero(s, (0));
+		ft_bzero(ft_s, (0));
 		fprintf(stdout, "%s\n", assert_eq_str(s, ft_s));
 
 		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
@@ -113,14 +125,14 @@ int		main(void)
 
 		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 		fprintf(stdout, "bzero(\"2\", 0) and ft_bzero(\"2\", 0) ? ");
-		bzero(s2, 0);
-		ft_bzero(ft_s2, 0);
+		bzero(s2, (0));
+		ft_bzero(ft_s2, (0));
 		fprintf(stdout, "%s\n", assert_eq_str(s2, ft_s2));
 
 		init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 		fprintf(stdout, "bzero(\"\", 0) and ft_bzero(\"\", 0) ? ");
-		bzero(empty, 0);
-		ft_bzero(ft_empty, 0);
+		bzero(empty, (0));
+		ft_bzero(ft_empty, (0));
 		fprintf(stdout, "%s\n", assert_eq_str(empty, ft_empty));
 	}
 
@@ -231,9 +243,84 @@ int		main(void)
 	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
 	fprintf(stdout, "\nFT_STRLEN\n");
 	fprintf(stdout, "strlen(\"lol\\n\") == ft_strlen(\"lol\\n\") => %s\n", assert_eq(strlen(s), ft_strlen(s)));
+	fprintf(stdout, "strlen(\"yo\") == ft_strlen(\"yo\") => %s\n", assert_eq(strlen(s1), ft_strlen(ft_s1)));
 	fprintf(stdout, "strlen(\"2\") == ft_strlen(\"2\") => %s\n", assert_eq(strlen(s2), ft_strlen(s2)));
 	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(""), ft_strlen("")));
 	fprintf(stdout, "strlen(\"\") == ft_strlen(\"\") => %s\n", assert_eq(strlen(empty2), ft_strlen(empty2)));
+
+	fprintf(stdout, "\nFT_MEMSET\n");
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"lol\\n\", 'a', 2) == ft_memset(\"lol\\n\", 'a', 2) => %s\n", assert_eq_str(memset(s, 'a', 2), ft_memset(ft_s, 'a', 2)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"lol\\n\", 'a', 4) == ft_memset(\"lol\\n\", 'a', 4) => %s\n", assert_eq_str(memset(s, 'a', 4), ft_memset(ft_s, 'a', 4)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"lol\\n\", 0, 1) == ft_memset(\"lol\\n\", 0, 1) => %s\n", assert_eq_str(memset(s, 0, 1), ft_memset(ft_s, 0, 1)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"lol\\n\", 'A', 0) == ft_memset(\"lol\\n\", 'A', 0) => %s\n", assert_eq_str(memset(s, 'A', (0)), ft_memset(ft_s, 'A', (0))));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"\", 'A', 0) == ft_memset(\"\", 'A', 0) => %s\n", assert_eq_str(memset(empty, 'A', (0)), ft_memset(ft_empty, 'A', (0))));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"\", 'A', 2) == ft_memset(\"\", 'A', 2) => %s\n", assert_eq_str(memset(empty2, 'A', 2), ft_memset(ft_empty2, 'A', 2)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memset(\"\", 0, 2) == ft_memset(\"\", 0, 2) => %s\n", assert_eq_str(memset(empty2, 0, 2), ft_memset(ft_empty2, 0, 2)));
+
+	fprintf(stdout, "\nFT_MEMCPY\n");
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"lol\\n\", \"hi\", 2) == ft_memcpy(\"lol\\n\", \"hi\", 2) => %s\n", assert_eq_str(memcpy(s, "hi", 2), ft_memcpy(ft_s, "hi", 2)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"lol\\n\", \"hi\", 1) == ft_memcpy(\"lol\\n\", \"hi\", 1) => %s\n", assert_eq_str(memcpy(s, "hi", 1), ft_memcpy(ft_s, "hi", 1)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"lol\\n\", \"hi\", 0) == ft_memcpy(\"lol\\n\", \"hi\", 0) => %s\n", assert_eq_str(memcpy(s, "hi", 0), ft_memcpy(ft_s, "hi", 0)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"lol\\n\", \"h\", 4) == ft_memcpy(\"lol\\n\", \"h\", 4) => %s\n", assert_eq_str(memcpy(s, "h", 4), ft_memcpy(ft_s, "h", 4)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"lol\\n\", \"hell\", 4) == ft_memcpy(\"lol\\n\", \"hell\", 4) => %s\n", assert_eq_str(memcpy(s, "hell", 4), ft_memcpy(ft_s, "hell", 4)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"lol\\n\", \"\", 0) == ft_memcpy(\"lol\\n\", \"\", 0) => %s\n", assert_eq_str(memcpy(s, "", 0), ft_memcpy(ft_s, "", 0)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"lol\\n\", \"\", 2) == ft_memcpy(\"lol\\n\", \"\", 2) => %s\n", assert_eq_str(memcpy(s, "", 2), ft_memcpy(ft_s, "", 2)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"\", \"yo\", 2) == ft_memcpy(\"\", \"yo\", 2) => %s\n", assert_eq_str(memcpy(s, "yo", 2), ft_memcpy(ft_s, "yo", 2)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"\", \"yo\", 1) == ft_memcpy(\"\", \"yo\", 1) => %s\n", assert_eq_str(memcpy(s, "yo", 1), ft_memcpy(ft_s, "yo", 1)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"\", \"\", 1) == ft_memcpy(\"\", \"\", 1) => %s\n", assert_eq_str(memcpy(s, "", 1), ft_memcpy(ft_s, "", 1)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "memcpy(\"\", \"\", 0) == ft_memcpy(\"\", \"\", 0) => %s\n", assert_eq_str(memcpy(s, "", 0), ft_memcpy(ft_s, "", 0)));
+
+	fprintf(stdout, "\nFT_STRDUP\n");
+	str = ft_strdup("lol"); ft_str = strdup("lol");
+	fprintf(stdout, "strdup(\"lol\") == ft_strdup(\"lol\") => %s\n", assert_eq_str(str, ft_str));
+	free(str); free(ft_str);
+	str = ft_strdup(""); ft_str = strdup("");
+	fprintf(stdout, "strdup(\"\") == ft_strdup(\"\") => %s\n", assert_eq_str(str, ft_str));
+	free(str); free(ft_str);
+	str = ft_strdup("1"); ft_str = strdup("1");
+	fprintf(stdout, "strdup(\"1\") == ft_strdup(\"1\") => %s\n", assert_eq_str(str, ft_str));
+	free(str); free(ft_str);
+
+
+	fprintf(stdout, "\nFT_MEMALLOC\n");
+	str = ft_memalloc(4); fprintf(stdout, "ft_memalloc(4) => YES\n"); free(str);
+	str = ft_memalloc(1); fprintf(stdout, "ft_memalloc(1) => YES\n"); free(str);
+	str = ft_memalloc(0); fprintf(stdout, "ft_memalloc(0) => YES\n"); free(str);
+
+	fprintf(stdout, "\nFT_STRNEW\n");
+	str = ft_strnew(4); fprintf(stdout, "ft_strnew(4) => YES\n"); free(str);
+	str = ft_strnew(1); fprintf(stdout, "ft_strnew(1) => YES\n"); free(str);
+	str = ft_strnew(0); fprintf(stdout, "ft_strnew(0) => YES\n"); free(str);
+
+	fprintf(stdout, "\nFT_STRCPY\n");
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "strcpy(\"lol\\n\", \"2\") == ft_strcpy(\"lol\\n\", \"2\") => %s\n", assert_eq_str(strcpy(s, s2), ft_strcpy(ft_s, ft_s2)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "strcpy(\"lol\\n\", \"test\") == ft_strcpy(\"lol\\n\", \"test\") => %s\n", assert_eq_str(strcpy(s, "test"), ft_strcpy(ft_s, "test")));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "strcpy(\"lol\\n\", \"\") == ft_strcpy(\"lol\\n\", \"\") => %s\n", assert_eq_str(strcpy(s, ""), ft_strcpy(ft_s, "")));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "strcpy(\"\", \"\") == ft_strcpy(\"\", \"\") => %s\n", assert_eq_str(strcpy(empty, ""), ft_strcpy(ft_empty, "")));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "strcpy(\"\", \"a\") == ft_strcpy(\"\", \"a\") => %s\n", assert_eq_str(strcpy(empty2, ""), ft_strcpy(ft_empty2, "")));
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);
