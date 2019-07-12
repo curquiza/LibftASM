@@ -4,7 +4,7 @@
 
 Bonus :
 - comparaison : strcmp, strchr
-- malloc : memmalloc, strnew
+- malloc : memalloc, strnew
 - affichage : putnbr
 - conversion : atoi
 - concatenation : strjoin, memjoin
