@@ -7,7 +7,6 @@ section .text
 _ft_isprint:		; ft_isprint(int c)
 	push rbp
 	mov rbp, rsp
-	sub rsp, 16
 
 	cmp rdi, 32
 	jl .false

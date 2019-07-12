@@ -4,7 +4,6 @@ section .text
 _ft_bzero:		; ft_bzero(void *s, int size)
 			push rbp
 			mov rbp, rsp
-			sub rsp, 16
 
 	.loop:
 			dec rsi
