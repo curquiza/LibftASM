@@ -18,6 +18,7 @@ SRC = $(addprefix $(SRC_DIR)/, \
 	ft_strdup.s \
 	ft_memalloc.s \
 	ft_strnew.s \
+	ft_strcpy.s \
 	)
 
 OBJ_DIR = obj

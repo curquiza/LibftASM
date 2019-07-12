@@ -5,7 +5,7 @@ _ft_memcpy:		; void *memcpy(void *restrict dst, const void *restrict src, size_t
 	push rbp
 	mov rbp, rsp
 
-	mov rax, rdi	; save rdi addr in rax
+	mov rax, rdi	; save rdi addr in rax = return already ready
 	mov rcx, rdx
 
 	cld			; DF = 0 => left to right

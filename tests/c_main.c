@@ -26,6 +26,7 @@ char	*ft_strdup(const char *s1);
 
 void	*ft_memalloc(size_t size);
 char	*ft_strnew(size_t size);
+char	*ft_strcpy(char * dst, const char * src);
 
 int		g_score = 0;
 
@@ -297,10 +298,22 @@ int		main(void)
 	str = ft_memalloc(1); fprintf(stdout, "ft_memalloc(1) => YES\n"); free(str);
 	str = ft_memalloc(0); fprintf(stdout, "ft_memalloc(0) => YES\n"); free(str);
 
-	fprintf(stdout, "\nFT_strnew\n");
+	fprintf(stdout, "\nFT_STRNEW\n");
 	str = ft_strnew(4); fprintf(stdout, "ft_strnew(4) => YES\n"); free(str);
 	str = ft_strnew(1); fprintf(stdout, "ft_strnew(1) => YES\n"); free(str);
 	str = ft_strnew(0); fprintf(stdout, "ft_strnew(0) => YES\n"); free(str);
+
+	fprintf(stdout, "\nFT_STRCPY\n");
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "strcpy(\"lol\\n\", \"2\") == ft_strcpy(\"lol\\n\", \"2\") => %s\n", assert_eq_str(strcpy(s, s2), ft_strcpy(ft_s, ft_s2)));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "strcpy(\"lol\\n\", \"test\") == ft_strcpy(\"lol\\n\", \"test\") => %s\n", assert_eq_str(strcpy(s, "test"), ft_strcpy(ft_s, "test")));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "strcpy(\"lol\\n\", \"\") == ft_strcpy(\"lol\\n\", \"\") => %s\n", assert_eq_str(strcpy(s, ""), ft_strcpy(ft_s, "")));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "strcpy(\"\", \"\") == ft_strcpy(\"\", \"\") => %s\n", assert_eq_str(strcpy(empty, ""), ft_strcpy(ft_empty, "")));
+	init(s, ft_s, s1, ft_s1, s2, ft_s2, empty, ft_empty, empty2, ft_empty2);
+	fprintf(stdout, "strcpy(\"\", \"a\") == ft_strcpy(\"\", \"a\") => %s\n", assert_eq_str(strcpy(empty2, ""), ft_strcpy(ft_empty2, "")));
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);
