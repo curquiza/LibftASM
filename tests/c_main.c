@@ -28,8 +28,8 @@ void	*ft_memalloc(size_t size);
 char	*ft_strnew(size_t size);
 char	*ft_strcpy(char * dst, const char * src);
 char	*ft_strjoin(const char *s1, const char *s2);
+int		ft_strcmp(const char *s1, const char *s2);
 // strchr
-// strjoin
 // atoi
 
 int		g_score = 0;
@@ -342,6 +342,9 @@ int		main(void)
 	str = ft_strjoin(NULL, "clem"); fprintf(stdout, "ft_strjoin(NULL, \"clem\") == NULL => %s\n", assert_eq_str(str, NULL)); free(str);
 	str = ft_strjoin("clem", NULL); fprintf(stdout, "ft_strjoin(\"clem\", NULL) == NULL => %s\n", assert_eq_str(str, NULL)); free(str);
 	str = ft_strjoin(NULL, NULL); fprintf(stdout, "ft_strjoin(NULL, NULL) == NULL => %s\n", assert_eq_str(str, NULL)); free(str);
+
+	fprintf(stdout, "\nFT_STRCMP\n");
+	fprintf(stdout, "strcmp(\"lol\", \"lol2\") == ft_strcmp(\"lol\", \"lol2\") => %s -> %d\n", assert_eq(strcmp("lol", "lol2"), ft_strcmp("lol", "lol2")), ft_strcmp("lol", "lol2"));
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);
