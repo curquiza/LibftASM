@@ -344,14 +344,15 @@ int		main(void)
 	str = ft_strjoin(NULL, NULL); fprintf(stdout, "ft_strjoin(NULL, NULL) == NULL => %s\n", assert_eq_str(str, NULL)); free(str);
 
 	fprintf(stdout, "\nFT_STRCMP\n");
-	// fprintf(stdout, "strcmp(\"test\", \"test\") == ft_strcmp(\"test\", \"test\") => %s\n", assert_eq(strcmp("test", "test"), ft_strcmp("test", "test")));
-	// fprintf(stdout, "strcmp(\"clem\", \"test\") == ft_strcmp(\"clem\", \"test\") => %s\n", assert_eq(strcmp("clem", "test"), ft_strcmp("clem", "test")));
-	// fprintf(stdout, "strcmp(\"lol\", \"lol2\") == ft_strcmp(\"lol\", \"lol2\") => %s\n", assert_eq(strcmp("lol", "lol2"), ft_strcmp("lol", "lol2")));
-	// fprintf(stdout, "strcmp(\"\", \"2\") == ft_strcmp(\"\", \"2\") => %s\n", assert_eq(strcmp("", "2"), ft_strcmp("", "2")));
-	// fprintf(stdout, "strcmp(\"2\", \"\") == ft_strcmp(\"2\", \"\") => %s\n", assert_eq(strcmp("2", ""), ft_strcmp("2", "")));
-	// fprintf(stdout, "strcmp(\"\", \"\") == ft_strcmp(\"\", \"\") => %s\n", assert_eq(strcmp("", ""), ft_strcmp("", "")));
-	fprintf(stdout, "ret = %d\n", ft_strcmp("clem", "test"));
-	fprintf(stdout, "ret = %d\n", strcmp("clem", "test"));
+	fprintf(stdout, "strcmp(\"test\", \"test\") == ft_strcmp(\"test\", \"test\") => %s\n", assert_eq(strcmp("test", "test"), ft_strcmp("test", "test")));
+	fprintf(stdout, "strcmp(\"clem\", \"test\") == ft_strcmp(\"clem\", \"test\") => %s\n", assert_eq(strcmp("clem", "test"), ft_strcmp("clem", "test")));
+	fprintf(stdout, "strcmp(\"lol\", \"lol2\") == ft_strcmp(\"lol\", \"lol2\") => %s\n", assert_eq(strcmp("lol", "lol2"), ft_strcmp("lol", "lol2")));
+	fprintf(stdout, "strcmp(\"\", \"2\") == ft_strcmp(\"\", \"2\") => %s\n", assert_eq(strcmp("", "2"), ft_strcmp("", "2")));
+	fprintf(stdout, "strcmp(\"2\", \"\") == ft_strcmp(\"2\", \"\") => %s\n", assert_eq(strcmp("2", ""), ft_strcmp("2", "")));
+	fprintf(stdout, "strcmp(\"\", \"\") == ft_strcmp(\"\", \"\") => %s\n", assert_eq(strcmp("", ""), ft_strcmp("", "")));
+	// fprintf(stdout, "ret strcmp = %d\n", strcmp("clem", "test"));
+	// fprintf(stdout, "ret strcmp = %d\n", strcmp("test", "test"));
+	// fprintf(stdout, "ret strcmp = %d\n", strcmp("lol", "lol2"));
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);
