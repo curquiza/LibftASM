@@ -30,7 +30,7 @@ char	*ft_strcpy(char * dst, const char * src);
 char	*ft_strjoin(const char *s1, const char *s2);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strchr(const char *s, int c);
-// atoi
+int		ft_atoi(const char *str);
 
 int		g_score = 0;
 
@@ -361,6 +361,25 @@ int		main(void)
 	printf("strchr(\"c\", 'c') == strchr(\"c\", 'c') => %s\n", assert_eq_str(strchr("c", 'c'), ft_strchr("c", 'c')));
 	printf("strchr(\"c\", 'd') == strchr(\"c\", 'd') => %s\n", assert_eq_str(strchr("c", 'd'), ft_strchr("c", 'd')));
 	printf("strchr(\"c\", -1) == strchr(\"c\", -1) => %s\n", assert_eq_str(strchr("c", -1), ft_strchr("c", -1)));
+
+	printf("\nFT_ATOI\n");
+	printf("atoi(\"123\") == ft_atoi(\"123\") => %s\n", assert_eq(atoi("123"), ft_atoi("123")));
+	printf("atoi(\"1\") == ft_atoi(\"1\") => %s\n", assert_eq(atoi("1"), ft_atoi("1")));
+	printf("atoi(\"0\") == ft_atoi(\"0\") => %s\n", assert_eq(atoi("0"), ft_atoi("0")));
+	printf("atoi(\"-0\") == ft_atoi(\"-0\") => %s\n", assert_eq(atoi("-0"), ft_atoi("-0")));
+	printf("atoi(\"2147483647\") == ft_atoi(\"2147483647\") => %s\n", assert_eq(atoi("2147483647"), ft_atoi("2147483647")));
+	printf("atoi(\"-2147483648\") == ft_atoi(\"-2147483648\") => %s\n", assert_eq(atoi("-2147483648"), ft_atoi("-2147483648")));
+	printf("atoi(\"lol\") == ft_atoi(\"lol\") => %s\n", assert_eq(atoi("lol"), ft_atoi("lol")));
+	printf("atoi(\"42lol\") == ft_atoi(\"42lol\") => %s\n", assert_eq(atoi("42lol"), ft_atoi("42lol")));
+	printf("atoi(\"lol42\") == ft_atoi(\"lol42\") => %s\n", assert_eq(atoi("lol42"), ft_atoi("lol42")));
+	printf("atoi(\"-42\") == ft_atoi(\"-42\") => %s\n", assert_eq(atoi("-42"), ft_atoi("-42")));
+	printf("atoi(\"+42\") == ft_atoi(\"+42\") => %s\n", assert_eq(atoi("+42"), ft_atoi("+42")));
+	printf("atoi(\"+++++42\") == ft_atoi(\"+++++42\") => %s\n", assert_eq(atoi("+++++42"), ft_atoi("+++++42")));
+	printf("atoi(\"     7\") == ft_atoi(\"     7\") => %s\n", assert_eq(atoi("     7"), ft_atoi("     7")));
+	printf("atoi(\"\\t-7\") == ft_atoi(\"\\t-7\") => %s\n", assert_eq(atoi("\t-7"), ft_atoi("\t-7")));
+	printf("atoi(\"\\v-7\") == ft_atoi(\"\\v-7\") => %s\n", assert_eq(atoi("\v-7"), ft_atoi("\v-7")));
+	printf("atoi(\"\\vt-7\") == ft_atoi(\"\\vt-7\") => %s\n", assert_eq(atoi("\vt-7"), ft_atoi("\vt-7")));
+	printf("atoi(\"\\n-7\") == ft_atoi(\"\\n-7\") => %s\n", assert_eq(atoi("\n-7"), ft_atoi("\n-7")));
 
 	if (g_score != 0)
 		printf(RED"\n%d fail(s) !\n"DEF, g_score);
