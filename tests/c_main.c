@@ -29,7 +29,7 @@ char	*ft_strnew(size_t size);
 char	*ft_strcpy(char * dst, const char * src);
 char	*ft_strjoin(const char *s1, const char *s2);
 int		ft_strcmp(const char *s1, const char *s2);
-// strchr
+char	*ft_strchr(const char *s, int c);
 // atoi
 
 int		g_score = 0;
@@ -350,9 +350,17 @@ int		main(void)
 	fprintf(stdout, "strcmp(\"\", \"2\") == ft_strcmp(\"\", \"2\") => %s\n", assert_eq(strcmp("", "2"), ft_strcmp("", "2")));
 	fprintf(stdout, "strcmp(\"2\", \"\") == ft_strcmp(\"2\", \"\") => %s\n", assert_eq(strcmp("2", ""), ft_strcmp("2", "")));
 	fprintf(stdout, "strcmp(\"\", \"\") == ft_strcmp(\"\", \"\") => %s\n", assert_eq(strcmp("", ""), ft_strcmp("", "")));
-	// fprintf(stdout, "ret strcmp = %d\n", strcmp("clem", "test"));
-	// fprintf(stdout, "ret strcmp = %d\n", strcmp("test", "test"));
-	// fprintf(stdout, "ret strcmp = %d\n", strcmp("lol", "lol2"));
+
+	fprintf(stdout, "\nFT_STRCHR\n");
+	printf("strchr(\"lol\", 'l') == strchr(\"lol\", 'l') => %s\n", assert_eq_str(strchr("lol", 'l'), ft_strchr("lol", 'l')));
+	printf("strchr(\"lol\", 'o') == strchr(\"lol\", 'o') => %s\n", assert_eq_str(strchr("lol", 'o'), ft_strchr("lol", 'o')));
+	printf("strchr(\"lol\", 'a') == strchr(\"lol\", 'a') => %s\n", assert_eq_str(strchr("lol", 'a'), ft_strchr("lol", 'a')));
+	printf("strchr(\"lol\", 0) == strchr(\"lol\", 0) => %s\n", assert_eq_str(strchr("lol", 0), ft_strchr("lol", 0)));
+	printf("strchr(\"\", 0) == strchr(\"\", 0) => %s\n", assert_eq_str(strchr("", 0), ft_strchr("", 0)));
+	printf("strchr(\"\", 'a') == strchr(\"\", 'a') => %s\n", assert_eq_str(strchr("", 'a'), ft_strchr("", 'a')));
+	printf("strchr(\"c\", 'c') == strchr(\"c\", 'c') => %s\n", assert_eq_str(strchr("c", 'c'), ft_strchr("c", 'c')));
+	printf("strchr(\"c\", 'd') == strchr(\"c\", 'd') => %s\n", assert_eq_str(strchr("c", 'd'), ft_strchr("c", 'd')));
+	printf("strchr(\"c\", -1) == strchr(\"c\", -1) => %s\n", assert_eq_str(strchr("c", -1), ft_strchr("c", -1)));
 
 	if (g_score != 0)
 		fprintf(stdout, RED"\n%d fail(s) !\n"DEF, g_score);

@@ -21,6 +21,7 @@ SRC = $(addprefix $(SRC_DIR)/, \
 	ft_strcpy.s \
 	ft_strjoin.s \
 	ft_strcmp.s \
+	ft_strchr.s \
 	)
 
 OBJ_DIR = obj
