@@ -4,7 +4,7 @@ section .text
 	extern _ft_strcpy
 	extern _ft_strlen
 
-_ft_strdup:		; char *strdup(const char *s1);
+_ft_strdup:		; char *ft_strdup(const char *s1)
 	push rbp
 	mov rbp, rsp
 
