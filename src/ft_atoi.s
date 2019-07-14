@@ -5,7 +5,7 @@ _ft_atoi:		; int ft_atoi(const char *str)
 	push rbp
 	mov rbp, rsp
 
-	sub rsp, 128				; save 128bits in function scope
+	sub rsp, 64				; save 64bits in function scope
 
 	mov rax, 0					; rslt = 0
 	mov rcx, 1					; neg = 1
