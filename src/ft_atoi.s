@@ -25,13 +25,13 @@ _ft_atoi:		; int ft_atoi(const char *str)
 		je .inc
 		jmp .check_sign_minus
 		.inc:
-			inc rdi
+			inc rdi					; str++
 			jmp .skip_blank
 
 	.check_sign_minus:
 		cmp byte[rdi], '-'
 		jne .check_sign_plus
-		mov rcx, -1
+		mov rcx, -1					; neg = -1
 		inc rdi
 		jmp .calc_loop
 
