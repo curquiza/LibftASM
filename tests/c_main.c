@@ -8,6 +8,7 @@
 #define YELLOW	"\033[1;33m"
 #define DEF		"\033[0m"
 
+// PART 1
 void	ft_bzero(void *s, size_t size);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
 int		ft_isalpha(int c);
@@ -19,11 +20,16 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_puts(const char *s);
 
+// PART 2
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *b, void *c, size_t len);
 char	*ft_strdup(const char *s1);
 
+// PART 3
+void	ft_cat(int fd);
+
+// BONUS
 void	*ft_memalloc(size_t size);
 char	*ft_strnew(size_t size);
 char	*ft_strcpy(char * dst, const char * src);
