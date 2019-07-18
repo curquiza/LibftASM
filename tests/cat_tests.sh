@@ -21,6 +21,14 @@ for file in "$input_folder"/*; do
 
 done
 
+printf "\nNEG_FD:\n"
+ft_ret="$($ft_cat "NEG_FD")"
+if [[ "$ft_ret" == "" ]]; then
+    printf "$GREEN%s$DEF\n" "OK"
+else
+    printf "$RED%s$DEF\n" "KO"
+fi
+
 printf "\nReading on STDIN:\n"
 $ft_cat "STDIN"
 
