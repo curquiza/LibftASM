@@ -32,7 +32,7 @@ _ft_puts:		; int ft_puts(char *str)
 	jmp .puts
 
 	.null:
-		mov rdi, .null_str
+		lea rdi, [rel .null_str]
 		jmp .puts
 
 	.puts:
@@ -49,7 +49,7 @@ _ft_puts:		; int ft_puts(char *str)
 		je .failure
 
 		mov rsi, 1			; write newline
-		mov rdi, .newline_str
+		lea rdi, [rel .newline_str]
 		call _ft_write
 
 		cmp rax, -1			; check return of write
