@@ -31,10 +31,12 @@ _ft_cat:				; void ft_cat(int fd)
 
 		mov rdi, STDOUT					; fd
 		mov rsi, buff					; buff
-		mov rdx, buffsize				; buffsize
-		; mov rdx, rax					; read return
+		mov rdx, rax					; read return
 		mov rax, MACH_SYSCALL(WRITE)	; write
 		syscall
+
+		cmp rax, -1						; if write return == -1
+		je .end							; leave loop
 
 		mov rdi, buff
 		mov rsi, buffsize
@@ -43,7 +45,6 @@ _ft_cat:				; void ft_cat(int fd)
 		jmp .read_loop
 
 	.end:
-		mov rax, 0				; return void
 		mov rsp, rbp			; Restore scope
 		pop rbp
 		ret
