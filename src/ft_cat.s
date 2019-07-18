@@ -32,6 +32,7 @@ _ft_cat:				; void ft_cat(int fd)
 		mov rdi, STDOUT					; fd
 		mov rsi, buff					; buff
 		mov rdx, buffsize				; buffsize
+		; mov rdx, rax					; read return
 		mov rax, MACH_SYSCALL(WRITE)	; write
 		syscall
 

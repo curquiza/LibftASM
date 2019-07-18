@@ -33,6 +33,11 @@ C_MAIN = tests/c_main.c
 C_MAIN_O = tests/c_main.o
 C_EXEC = c_tests
 
+C_CAT = tests/c_cat.c
+C_CAT_O = tests/c_cat.o
+C_CAT_EXEC = c_cat_tests
+CAT_SCRIPT = tests/cat_tests.sh
+
 ASM_MAIN = tests/asm_main.s
 ASM_MAIN_O = tests/asm_main.o
 ASM_EXEC = asm_tests
@@ -54,7 +59,12 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.s
 
 $(C_EXEC): $(NAME) $(C_MAIN)
 	@$(GCC) -c $(C_MAIN) -o $(C_MAIN_O)
-	@$(GCC) $(C_MAIN_O) $(NAME) -o $(C_EXEC)
+	@$(GCC) $(C_MAIN_O) $(NAME) -o $@
+	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
+
+$(C_CAT_EXEC): $(NAME) $(C_CAT)
+	@$(GCC) -c $(C_CAT) -o $(C_CAT_O)
+	@$(GCC) $(C_CAT_O) $(NAME) -o $@
 	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
 $(ASM_EXEC): $(NAME) $(ASM_MAIN)
@@ -63,18 +73,15 @@ $(ASM_EXEC): $(NAME) $(ASM_MAIN)
 	@printf "%-45s\033[1;32m%s\033[0m\n" "Make $@" "OK"
 
 run_c_tests: $(C_EXEC)
-	@printf "\nEXECUTION:\n"
+	@printf "\nEXECUTION MAIN:\n"
 	@./$(C_EXEC)
+
+run_cat_tests: $(C_CAT_EXEC)
+	@printf "\nEXECUTION CAT:\n"
+	@bash $(CAT_SCRIPT)
 
 run_asm_tests: $(ASM_EXEC)
 	@printf "\nEXECUTION:\n"
-	@./$(ASM_EXEC)
-
-run_tests: $(C_EXEC) $(ASM_EXEC)
-	@printf "\nEXECUTION:\n"
-	@printf "\nC:\n"
-	@./$(C_EXEC)
-	@printf "\nASM:\n"
 	@./$(ASM_EXEC)
 
 clean :
