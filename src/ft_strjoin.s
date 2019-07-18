@@ -41,6 +41,9 @@ _ft_strjoin:		; char *ft_strjoin(const char *s1, const char *s2)
 	mov rdi, rax
 	call _ft_strnew			; strnew(s1_len + s2_len)
 
+	cmp rax, 0				; if malloc failed, leave
+	je .null_end
+
 	mov rdi, rax			; allocated str = rslt
 	mov rsi, [rsp]			; s1
 	call _ft_strcat			; copy s1 in rslt

@@ -15,6 +15,9 @@ _ft_strdup:		; char *ft_strdup(const char *s1)
 	mov rdi, rax			; move len in rdi
 	call _ft_strnew
 
+	cmp rax, 0				; if malloc failed, leave
+	je .end
+
 	mov rdi, rax			; dest = ft_strnew return
 	mov rsi, [rsp]			; src
 	call _ft_strcpy

@@ -11,7 +11,7 @@ _ft_memalloc:			; void *ft_memalloc(size_t size)
 	mov [rsp], rdi		; stock size in stack from function scope
 
 	call _malloc
-	cmp rax, 0
+	cmp rax, 0			; if malloc failed, leave
 	je .end
 
 	mov rdi, rax
