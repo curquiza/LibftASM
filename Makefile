@@ -85,9 +85,9 @@ run_asm_tests: $(ASM_EXEC)
 	@./$(ASM_EXEC)
 
 clean :
-	@rm -rf $(OBJ_DIR) $(ASM_MAIN_O) $(C_MAIN)_O
+	@rm -rf $(OBJ_DIR) $(ASM_MAIN_O) $(C_MAIN_O) $(C_CAT_O)
 
 fclean : clean
-	@rm -f $(NAME) $(C_EXEC) $(ASM_EXEC)
+	@rm -f $(NAME) $(C_EXEC) $(C_CAT_EXEC) $(ASM_EXEC)
 
 re : fclean all
