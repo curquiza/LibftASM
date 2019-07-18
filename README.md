@@ -9,10 +9,16 @@ $> make
 [...]
 ```
 
-## Test it
+## Test library
 
 ```bash
 $> make run_c_tests
+```
+
+## Test ft_cat
+
+```bash
+$> make run_cat_tests
 ```
 
 ## Implemented Functions
