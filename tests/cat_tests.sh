@@ -24,9 +24,9 @@ done
 printf "\nNEG_FD:\n"
 ft_ret="$($ft_cat "NEG_FD")"
 if [[ "$ft_ret" == "" ]]; then
-    printf "$GREEN%s$DEF\n" "OK"
+    printf "$GREEN%s$DEF\n" "PASSED"
 else
-    printf "$RED%s$DEF\n" "KO"
+    printf "$RED%s$DEF\n" "FAILED"
 fi
 
 printf "\nReading on STDIN:\n"

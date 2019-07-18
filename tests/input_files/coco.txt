@@ -1,579 +1,636 @@
 <!DOCTYPE html>
-<!-- saved from url=(0081)https://projects.intrav2.42.fr/projects/libftasm/scales/35/scale_teams/34317/edit -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Intranet 42</title>
-<meta content="authenticity_token" name="csrf-param">
-<meta content="fChe4iyacTDNLyUPxDw8IsB0E1jnRVUpi2IwnFUIOiA=" name="csrf-token">
-<meta charset="utf-8">
-<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
-<meta content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" name="viewport">
-<meta content="yes" name="mobile-web-app-capable">
-<meta content="yes" name="apple-mobile-web-app-capable">
-<meta content="translucent-black" name="apple-mobile-web-app-status-bar-style">
-<meta content="Intranet 42" name="apple-mobile-web-app-title">
-<meta content="on" http-equiv="cleartype">
-<link href="https://profile.intrav2.42.fr/assets/42_logo_black-0dcc25d1cdb873c2857bc80734364451.png" rel="icon" type="image/svg">
-<link href="https://profile.intrav2.42.fr/assets/42_logo_black-0dcc25d1cdb873c2857bc80734364451.png" rel="shortcut icon" type="image/svg">
-<!--[if lt IE 9]>
-<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
-<![endif]-->
-<link href="./libftasm_files/application-0990c964295fe19cb3a90fcb10e3bd91.css" media="all" rel="stylesheet">
-<script async="" src="./Intranet 42_files/analytics.js"></script><script src="./Intranet 42_files/require-bda0ed7529a31c9f1b6d46ba76289e1b.js"></script><script>require.config({"baseUrl":"/assets","packages":["vendor","common","common/media","common/add_on","common/callback","common/modal","common/simple_form","common/typeahead","project"],"paths":{"common/main":"/assets/common/main-4b5e972f39589e2a0a68a8f85b1eb923","vendor/main":"/assets/vendor/main-d90e7470c64b8666620bdab32bcc98fb","application":"/assets/application-29d58e797d5ec6b85a98cd53d0f479d7"},"shim":{"scrollspy":{"deps":["jquery"]},"vendor/video-dev":{"deps":["jquery"]},"vendor/video-markers":{"deps":["vendor/video-dev"]},"vendor/video-resolutions":{"deps":["vendor/video-dev"]},"datetimepicker":{"deps":["jquery","moment"]},"rangeslider":{"deps":["jquery"]},"fullcalendar":{"deps":["jquery","moment"]},"jquery_nested_form":{"deps":["jquery"]},"highcharts-release":{"deps":["jquery"],"exports":"Highcharts"},"jquery-textcomplete":{"deps":["jquery"]},"chosen-jquery":{"deps":["jquery"]},"maxlength":{"deps":["jquery"]},"moment-twitter":{"deps":["moment"]},"jquery-ujs":{"deps":["jquery"]},"onScreen":{"deps":["jquery"]},"typeahead":{"deps":["jquery"]},"bloodhound":{"deps":["jquery"]},"bootstrap":{"deps":["jquery"]},"easel":{"exports":"createjs"},"tween":{"deps":["easel"],"exports":"Tween"},"stats":{"deps":["jquery"],"exports":"Stats"}}}); require(["application"]);</script>
-<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="application" src="./Intranet 42_files/application-29d58e797d5ec6b85a98cd53d0f479d7.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vendor/main" src="./Intranet 42_files/main-d90e7470c64b8666620bdab32bcc98fb.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common/main" src="./Intranet 42_files/main-4b5e972f39589e2a0a68a8f85b1eb923.js"></script></head><body data-id="10151" data-url="//websocket.intrav2.42.fr/" class="visible">
-<div class="main-navbar">
-<div class="main-navbar-left">
-<div class="main-navbar-logo">
-<a href="https://profile.intrav2.42.fr/"><img alt="42 logo" src="./Intranet 42_files/42_logo-0e3c2f415e527aa6703482c3b9a4a7bd.svg">
-</a></div>
-<div class="btn hidden-sidebars main-menu-trigger" data-trigger-menu="">
-<span class="icon-align-justify"></span>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>X86 Assembly/Control Flow - Wikibooks, open books for an open world</title>
+<script>document.documentElement.className=document.documentElement.className.replace(/(^|\s)client-nojs(\s|$)/,"$1client-js$2");RLCONF={"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"X86_Assembly/Control_Flow","wgTitle":"X86 Assembly/Control Flow","wgCurRevisionId":3557431,"wgRevisionId":3557431,"wgArticleId":51941,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Book:X86 Assembly"],"wgBreakFrames":!1,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"X86_Assembly/Control_Flow","wgRelevantArticleId":51941,"wgRequestId":
+"XSr0GwpAICwAAHn@D0AAAAAI","wgCSPNonce":!1,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3,"quality":2,"pristine":3}}},"wgStableRevisionId":3509224,"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgPoweredByHHVM":!0,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikibooks","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready","user":"ready","user.options":"ready","user.tokens":"loading",
+"ext.flaggedRevs.icons":"ready","oojs-ui-core.styles":"ready","oojs-ui.styles.indicators":"ready","mediawiki.widgets.styles":"ready","oojs-ui-core.icons":"ready","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","wikibase.client.init":"ready","ext.flaggedRevs.basic":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","ext.3d.styles":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.flaggedRevs.advanced","ext.gadget.wikidialog","ext.gadget.commons-file","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks",
+"ext.uls.interface","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.3d.styles%7Cext.flaggedRevs.basic%2Cicons%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.toc.styles%7Cmediawiki.widgets.styles%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui.styles.indicators%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.34.0-wmf.13"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit"/>
+<link rel="edit" title="Edit" href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit"/>
+<link rel="shortcut icon" href="/static/favicon/wikibooks.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikibooks Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikibooks.org/wiki/X86_Assembly/Control_Flow"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-X86_Assembly_Control_Flow rootpage-X86_Assembly skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
 </div>
-<form action="https://profile.intrav2.42.fr/searches/search" class="main-navbar-search hidden-xs" data-user-url="https://profile.intrav2.42.fr/users/" method="get">
-<input class="search-input" name="query" placeholder="search...">
-</form>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">X86 Assembly/Control Flow</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikibooks, open books for an open world</div>
+		<div id="contentSub"><span class="subpages">&lt; <a href="/wiki/X86_Assembly" title="X86 Assembly">X86 Assembly</a></span><div id="mw-fr-revisiontag" class="flaggedrevs_basic flaggedrevs_draft_notsynced plainlinks noprint"><span aria-disabled='false' title='Unreviewed changes are displayed on this page' class='flaggedrevs-icon oo-ui-widget oo-ui-widget-enabled oo-ui-iconElement-icon oo-ui-icon-block oo-ui-iconElement oo-ui-labelElement-invisible oo-ui-iconWidget'></span>The <a class="external text" href="//en.wikibooks.org/w/index.php?title=X86_Assembly/Control_Flow&amp;stable=1">latest reviewed version</a> was <a class="external text" href="//en.wikibooks.org/w/index.php?title=Special:Log&amp;type=review&amp;page=X86_Assembly/Control_Flow">checked</a> on <i>11 January 2019</i>. There are <a class="external text" href="//en.wikibooks.org/w/index.php?title=X86_Assembly/Control_Flow&amp;oldid=3509224&amp;diff=cur&amp;diffonly=0">2 pending changes</a> awaiting review.</div>
 </div>
-<div class="main-navbar-user-nav">
-<span class="dropdown">
-<a data-toggle="dropdown" href="https://projects.intrav2.42.fr/projects/libftasm/scales/35/scale_teams/34317/edit#">
-<span data-login="login">
-login
-</span>
-<div class="user-profile-picture visible-sidebars" style="background-image: url( https://cdn.42.fr/userprofil/profilview/login.jpg)"></div>
-</a>
-<ul aria-labelledby="User menu" class="dropdown-menu" role="menu">
-<li>
-<a href="https://profile.intrav2.42.fr/slots"><span class="icon-calendar"></span>
-Manage slots
-</a></li>
-<li>
-<a href="https://profile.intrav2.42.fr/users/login"><span class="icon-user"></span>
-View my profile
-</a></li>
-<li class="visible-xs">
-<a data-method="delete" href="https://signin.intrav2.42.fr/logout" rel="nofollow"><span class="icon-power-off"></span>
-Logout
-</a></li>
+		
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><center><div class="PrettyTextBox noprint" style="width: 90%; float: center; clear: all; padding: 5px; margin: 5px;"><big><b><a href="/wiki/X86_Assembly" title="X86 Assembly">x86 Assembly</a></b></big>
+</div></center>
+<table class="plainlinks noprint messagebox notice" style="width:250px; float:right; clear:right; margin:0px; margin-left:10px;">  
+<tbody><tr style="vertical-align:middle;"><td style="padding:0.1em; text-align:center; vertical-align:middle; width:45px; border:none;">
+<img alt="Wikipedia-logo-v2.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/40px-Wikipedia-logo-v2.svg.png" decoding="async" width="40" height="37" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/60px-Wikipedia-logo-v2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/80px-Wikipedia-logo-v2.svg.png 2x" data-file-width="103" data-file-height="94" /></td>
+<td style="color:black; text-align:left; vertical-align:middle; padding:0.5em; padding-left:0em; border:none;">
+<p><a href="https://en.wikipedia.org/wiki/" class="extiw" title="w:">Wikipedia</a> has related information at <a class="external text" href="//en.wikipedia.org/wiki/Control_flow"><i><b>Control flow</b></i></a>
+</p>
+</td></tr></tbody></table>
+<p>Almost all programming languages have the ability to change the order in which statements are evaluated, and assembly is no exception. The instruction pointer (EIP) register contains the address of the next instruction to be executed. To change the flow of control, the programmer must be able to modify the value of EIP. This is where control flow functions come in.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nf">mov</span> <span class="no">eip</span><span class="p">,</span> <span class="no">label</span>   <span class="c">; wrong</span>
+<span class="no">jmp</span> <span class="no">label</span>        <span class="c">; right</span>
+</pre></div>
+<p><br />
+</p>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Comparison_Instructions"><span class="tocnumber">1</span> <span class="toctext">Comparison Instructions</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Jump_Instructions"><span class="tocnumber">2</span> <span class="toctext">Jump Instructions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Unconditional_Jumps"><span class="tocnumber">2.1</span> <span class="toctext">Unconditional Jumps</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Jump_if_Equal"><span class="tocnumber">2.2</span> <span class="toctext">Jump if Equal</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Jump_if_Not_Equal"><span class="tocnumber">2.3</span> <span class="toctext">Jump if Not Equal</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Jump_if_Greater"><span class="tocnumber">2.4</span> <span class="toctext">Jump if Greater</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Jump_if_Greater_or_Equal"><span class="tocnumber">2.5</span> <span class="toctext">Jump if Greater or Equal</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Jump_if_Above_(unsigned_comparison)"><span class="tocnumber">2.6</span> <span class="toctext">Jump if Above (unsigned comparison)</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Jump_if_Above_or_Equal_(unsigned_comparison)"><span class="tocnumber">2.7</span> <span class="toctext">Jump if Above or Equal (unsigned comparison)</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Jump_if_Lesser"><span class="tocnumber">2.8</span> <span class="toctext">Jump if Lesser</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Jump_if_Less_or_Equal"><span class="tocnumber">2.9</span> <span class="toctext">Jump if Less or Equal</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Jump_if_Below_(unsigned_comparison)"><span class="tocnumber">2.10</span> <span class="toctext">Jump if Below (unsigned comparison)</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Jump_if_Below_or_Equal_(unsigned_comparison)"><span class="tocnumber">2.11</span> <span class="toctext">Jump if Below or Equal (unsigned comparison)</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Jump_if_Overflow"><span class="tocnumber">2.12</span> <span class="toctext">Jump if Overflow</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Jump_if_Not_Overflow"><span class="tocnumber">2.13</span> <span class="toctext">Jump if Not Overflow</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Jump_if_Zero"><span class="tocnumber">2.14</span> <span class="toctext">Jump if Zero</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Jump_if_Not_Zero"><span class="tocnumber">2.15</span> <span class="toctext">Jump if Not Zero</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Jump_if_Signed"><span class="tocnumber">2.16</span> <span class="toctext">Jump if Signed</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Jump_if_Not_Signed"><span class="tocnumber">2.17</span> <span class="toctext">Jump if Not Signed</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Jump_if_counter_register_is_zero"><span class="tocnumber">2.18</span> <span class="toctext">Jump if counter register is zero</span></a></li>
 </ul>
-</span>
-<div class="user-actions hidden-xs">
-<a class="user-action labelable" data-notification-drop="" href="https://projects.intrav2.42.fr/projects/libftasm/scales/35/scale_teams/34317/edit#"><span class="icon-envelope-o"></span>
-<span class="labeled">0</span>
-</a><a class="user-action labelable" data-method="delete" href="https://signin.intrav2.42.fr/logout" rel="nofollow"><span class="icon-power-off unlabeled"></span>
-</a></div>
-</div>
-</div>
-
-<div class="page">
-<div class="left-sidebar-fix with-main-menu"></div>
-<div class="page-sidebar left-main-container page-sidebar-fixed-left under-main-navbar"><ul class="main-left-navbar">
-<li>
-<a class="inactive" href="https://profile.intrav2.42.fr/">
-<span class="icon-scale-1"></span>
-<span class="visible-overlay">
-Profile
-</span>
-</a>
 </li>
-<li>
-<a class="active" href="https://projects.intrav2.42.fr/">
-<span class="icon-network-2-1"></span>
-<span class="visible-overlay">
-Projets
-</span>
-</a>
-</li>
-<li>
-<a class="inactive" href="https://elearning.intrav2.42.fr/">
-<span class="icon-movie-play-1"></span>
-<span class="visible-overlay">
-E-learning
-</span>
-</a>
-</li>
-<li>
-<a class="inactive" href="https://forum.intrav2.42.fr/">
-<span class="icon-bubble-conversation-5"></span>
-<span class="visible-overlay">
-Forum
-</span>
-</a>
-</li>
-<li>
-<a class="inactive" href="https://meta.intrav2.42.fr/">
-<span class="icon-compass-2"></span>
-<span class="visible-overlay">
-Meta
-</span>
-</a>
-</li>
-</ul><div class="app-sidebar-left">
-<div class="marked-title inverse">Go to</div>
-<div class="projects-menu-list">
-<a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/"><span class="icon-briefcase project-status-icon"></span>
-My projects
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects"><span class="icon-list-1 project-status-icon"></span>
-All projects
-</a></div>
-<div class="marked-title inverse">Your projects</div>
-<div class="projects-menu-list">
-<a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/libft"><span class="project-status-icon icon-check project-status-finished"></span>
-Libft
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/get_next_line"><span class="project-status-icon icon-check project-status-finished"></span>
-Get_Next_Line
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/ft_ls"><span class="project-status-icon icon-check project-status-finished"></span>
-ft_ls
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/fdf"><span class="project-status-icon icon-check project-status-finished"></span>
-FdF
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/ft_printf"><span class="project-status-icon icon-check project-status-finished"></span>
-ft_printf
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/ft_sh1"><span class="project-status-icon icon-check project-status-finished"></span>
-ft_sh1
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/wolf3d"><span class="project-status-icon icon-check project-status-finished"></span>
-Wolf3d
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/exam-c"><span class="project-status-icon icon-check project-status-finished"></span>
-Exam C
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/fract-ol"><span class="project-status-icon icon-clock project-status-waiting"></span>
-Fract'ol
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/corewar"><span class="project-status-icon icon-check project-status-finished"></span>
-Corewar
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/rtv1"><span class="project-status-icon icon-check project-status-finished"></span>
-RTv1
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/rt"><span class="project-status-icon icon-check project-status-finished"></span>
-RT
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/filler"><span class="project-status-icon icon-check project-status-finished"></span>
-Filler
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/push_swap"><span class="project-status-icon icon-check project-status-finished"></span>
-Push_swap
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/lem_in"><span class="project-status-icon icon-check project-status-finished"></span>
-Lem_in
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/ft_sh2"><span class="project-status-icon icon-check project-status-finished"></span>
-ft_sh2
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/ft_select"><span class="project-status-icon icon-check project-status-finished"></span>
-ft_select
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/ft_sh3"><span class="project-status-icon icon-check project-status-finished"></span>
-ft_sh3
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/42sh"><span class="project-status-icon icon-check project-status-finished"></span>
-42sh
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/malloc"><span class="project-status-icon icon-check project-status-finished"></span>
-Malloc
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/nm-otool"><span class="project-status-icon icon-check project-status-finished"></span>
-Nm-otool
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/ft_script"><span class="project-status-icon icon-check project-status-finished"></span>
-ft_script
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/philosophers"><span class="project-status-icon icon-check project-status-finished"></span>
-Philosophers
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/ft_p"><span class="project-status-icon icon-check project-status-finished"></span>
-ft_p
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/irc"><span class="project-status-icon icon-check project-status-finished"></span>
-IRC
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/lem-ipc"><span class="project-status-icon icon-check project-status-finished"></span>
-Lem-ipc
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/zappy"><span class="project-status-icon icon-check project-status-finished"></span>
-Zappy
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/framework-0"><span class="project-status-icon icon-check project-status-finished"></span>
-Framework 0
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/framework-1"><span class="project-status-icon icon-check project-status-finished"></span>
-Framework 1
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/framework-2"><span class="project-status-icon icon-check project-status-finished"></span>
-Framework 2
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/big-web-project"><span class="project-status-icon icon-check project-status-finished"></span>
-Big Web Project
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/piscine-php"><span class="project-status-icon icon-check project-status-finished"></span>
-Piscine PHP
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/rushes"><span class="project-status-icon project-status-no-idea"></span>
-Rushes
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/piscine-c"><span class="project-status-icon icon-check project-status-finished"></span>
-Piscine C++
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/mod1"><span class="project-status-icon icon-clock project-status-progress"></span>
-mod1
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/libftasm"><span class="project-status-icon icon-clock project-status-progress"></span>
-LibftASM
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/abstract-vm"><span class="project-status-icon icon-check project-status-finished"></span>
-Abstract VM
-</a><a class="project-item sidebar-item" href="https://projects.intrav2.42.fr/projects/projet-libre"><span class="project-status-icon icon-clock project-status-progress"></span>
-Open Project
-</a></div>
-</div></div>
-<div class="page-content">
-<div class="row">
-
-<div class="main-top-menu">
-
-</div>
-<div class="container-item">
-<h1 class="main-title primary">
-Scale for project
-
-<a href="https://projects.intrav2.42.fr/projects/libftasm">LibftASM</a>
-</h1>
-<h4 class="marked-title">Git repository</h4>
-<div class="container-inner-item project-repo">
-<div class="input-group">
-<input class="form-control" data-git-url="" disabled="" type="text" value="**link**">
-<span class="input-group-addon" data-copy="[data-git-url]">
-<span class="icon-copy3"></span>
-</span>
-</div>
-</div>
-<div class="scale-introduction dancer from-down" id="introduction-35">
-<h3>Introduction</h3>
-<p>
-Nous vous demandons, pour le bon déroulement de cette notation : 
-<br>
-<br>- De rester courtois, poli, respectueux, constructif, lors de cet 
-<br>échange. Le lien de confiance entre la communauté 42 et vous en 
-<br>dépend. 
-<br>- De bien mettre en évidence auprès de la personne notée (ou 
-<br>du groupe) les dysfonctionnements éventuels. 
-<br>- D'accepter qu'il puisse y a voir parfois des différences d’interprétation 
-<br>sur les demandes du sujet ou l’étendue des fonctionnalités. Restez ouvert 
-<br>d'esprit face a la vision de l'autre (a-t-il raison ou tort ?), et 
-<br>notez le plus honnêtement possible. 
-<br>
-<br>Bonne soutenance à tous !
-</p>
-</div>
-<div class="scale-guidelines dancer from-down" id="guidelines-35">
-<h3>Guidelines</h3>
-<p>
-VOUS NE DEVEZ CORRIGER QUE CE QUI SE TROUVE SUR LE 
-<br>DÉPÔT DE RENDU DE L'ÉTUDIANT. 
-<br>
-<br>Constatez que l'étudiant ou le groupe à noter est bien dans un répertoire VIDE. Il effectue un "git clone" de son dépôt de rendu. 
-<br>
-<br>Vérifiez que les éléments suivants sont bien conformes au sujet : 
-<br>- il y a bien un rendu 
-<br>- un `main.c` de test.
-<br>- la présence du Makefile avec les règles demandées.
-<br>- les `.s` sont bien compilés avec `nasm -f macho64`
-<br>- vous devez compiler le main de test et la libfts.a de cette façon : `gcc -Wall -Wextra -Werror main.c libfts.a`. Vous ne devez pas rajouter `-no_pie`.
-<br>
-<br>Pour la suite, quelle que soit la partie, y compris les bonus, si le programme: 
-<br>- segfault 
-<br>- buserror 
-<br>- double free 
-<br>- tout autre indicateur qui révèle un comportement inadéquat du programme vis a vis du système 
-<br>alors la notation s'arrête. 
-<br>
-<br>Si il y a triche, la notation s'arrête. 
-<br>Pour mémoire, un cas de triche correspond à un code qui n'est pas fait 
-<br>ou pas reproductible par son auteur, ou bien l'utilisation d’éléments 
-<br>explicitement interdits ou qui visent à dénaturer le rôle pédagogique 
-<br>du projet. 
-<br>A utiliser avec calme, précaution, et discernement. 
-<br>
-</p>
-</div>
-</div>
-<div class="container-item dancer from-down hidden-xlg" id="ratings-35">
-<h2>Ratings</h2>
-<div class="on-grey">
-<p class="marked-title">Define the type of error (if there is an error), which ended the correction.</p>
-<div class="btn-group block" data-radio-item="flag-small">
-<label class="btn btn-default btn-success label_flag_ok on-active" for="scale_team_flag_ok" name="scale_team[flag]">
-<span class="icon-checkmark"></span>
-Ok
-</label>
-<label class="btn btn-danger btn-default label_flag_empty_work on-active" for="scale_team_flag_empty_work" name="scale_team[flag]">
-<span class="icon-question-circle"></span>
-Empty work
-</label>
-<label class="btn btn-danger btn-default label_flag_incomplete_work on-active" for="scale_team_flag_incomplete_work" name="scale_team[flag]">
-<span class="icon-exclamation-circle"></span>
-Incomplete work
-</label>
-<label class="btn btn-danger btn-default label_flag_no_author_file on-active" for="scale_team_flag_no_author_file" name="scale_team[flag]">
-<span class="icon-user"></span>
-No author file
-</label>
-<label class="btn btn-danger btn-default label_flag_invalid_compilation on-active" for="scale_team_flag_invalid_compilation" name="scale_team[flag]">
-<span class="icon-gears"></span>
-Invalid compilation
-</label>
-<label class="btn btn-danger btn-default label_flag_norme on-active" for="scale_team_flag_norme" name="scale_team[flag]">
-<span class="icon-book"></span>
-Norme
-</label>
-<label class="btn btn-danger btn-default label_flag_cheat on-active" for="scale_team_flag_cheat" name="scale_team[flag]">
-<span class="icon-times-circle"></span>
-Cheat
-</label>
-<label class="btn btn-danger btn-default label_flag_crash on-active" for="scale_team_flag_crash" name="scale_team[flag]">
-<span class="icon-fire2"></span>
-Crash
-</label>
-</div>
-</div>
-</div>
-<div class="container-item dancer from-down" id="attachments-35">
-<h2>Attachments</h2>
-<div class="project-attachments-list">
-<div class="project-attachment-item attachment-code">
-<h4 class="attachment-name">
-<span class="icon-file-code"></span>
-<span class="marked-title">main.c</span>
-</h4>
-<div class="attachment-content">
-<div class="highlight"><pre><span class="c1">// bug intrav2 vous devez inclure fcntl.h</span><br><br><span class="kt">void</span>	<span class="nf">ft_cat</span><span class="p">(</span><span class="kt">int</span> <span class="n">fd</span><span class="p">);</span><br><br><span class="kt">int</span><br><span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">ac</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">av</span><span class="p">)</span> <span class="p">{</span><br>	<span class="n">ft_cat</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><br>	<span class="n">ft_cat</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="n">__FILE__</span><span class="p">,</span> <span class="n">O_RDONLY</span><span class="p">));</span><br>	<span class="n">ft_cat</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="n">av</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">O_RDONLY</span><span class="p">));</span><br>	<span class="n">ft_cat</span><span class="p">(</span><span class="o">-</span><span class="mi">42</span><span class="p">);</span><br>	<span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">ac</span><span class="p">;</span><br>	<span class="k">return</span> <span class="p">(</span><span class="mi">0</span><span class="p">);</span><br><span class="p">}</span><br></pre></div>
-</div>
-</div>
-</div>
-
-
-<div class="project-attachments-list">
-<div class="project-attachment-item">
-<h4 class="attachment-name">
-<span class="icon-file"></span>
-<a href="https://projects.intrav2.42.fr/uploads/document/document/68/asm_lib.pdf" target="_blank">Subject</a>
-</h4>
-</div>
-<div class="project-attachment-item">
-<h4 class="attachment-name">
-<span class="icon-link-2"></span>
-<a href="https://elearning.intrav2.42.fr/notions/70/subnotions/267/locale_resources/265/videos/213" target="_blank">Intra - Elearning - LibftASM</a>
-</h4>
-</div>
-</div>
-
-
-</div>
-<form accept-charset="UTF-8" action="https://projects.intrav2.42.fr/projects/libftasm/scales/35/scale_teams/34317" class="simple_form form-horizontal edit_scale_team" id="edit_scale_team_34317" method="post" novalidate="novalidate"><div style="display:none"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="patch"><input name="authenticity_token" type="hidden" value="fChe4iyacTDNLyUPxDw8IsB0E1jnRVUpi2IwnFUIOiA="></div><div class="container-item scale-section-answers">
-<h2 class="main-title primary">Sections</h2>
-<div class="on-grey">
-<section class="scale-section-item dancer from-down" id="section-163">
-<h3 class="main-title">libfts</h3>
-<p></p>
-<h4 class="scale-question-name">Fonctions simples de la libc</h4>
-<p class="scale-section-guidelines">
-Testez que TOUTES ces fonctions font leur job exactement comme il faut : 
-<br>- ft_bzero
-<br>- ft_strcat
-<br>- ft_isalpha 
-<br>- ft_isdigit 
-<br>- ft_isalnum 
-<br>- ft_isascii 
-<br>- ft_isprint
-<br>- ft_toupper
-<br>- ft_tolower
-<br>- ft_puts 
-<br>
-<br>Ça fonctionne ?
-<br>
-<br>
-</p>
-<div class="scale-question-answers">
-<div class="form-group hidden scale_team_answer_id"><div class="col-sm-10"><input class="hidden form-control" id="scale_team_answer_id" name="[scale_team][answers_attributes][0][id]" type="hidden"></div></div>
-<div class="form-group hidden scale_team_answer_question_id"><div class="col-sm-10"><input class="hidden form-control" id="scale_team_answer_question_id" name="[scale_team][answers_attributes][0][question_id]" type="hidden" value="325"></div></div>
-<div class="marked-title text-center">Rate it from 0 (failed) through 5 (excellent)</div>
-<input autocomplete="off" class="star-range slided" data-star-range="" max="5" name="[scale_team][answers_attributes][0][value]" step="1" type="range" value="0" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"><div class="rangeslider" id="js-rangeslider-0"><div class="rangeslider__fill" style="width: 20px;"></div><div class="rangeslider__handle" style="left: 0px;"></div></div>
-</div>
-<h4 class="scale-question-name">Fonctions simples mais un peu moins de la libc</h4>
-<p class="scale-section-guidelines">
-Testez que TOUTES ces fonctions font leur job exactement comme il faut : 
-<br>- ft_strlen
-<br>- ft_memset
-<br>- ft_memcpy
-<br>- ft_strdup
-<br>
-<br>Ça fonctionne ?
-<br>
-<br>!! si dans une de ces fonctions il n'y a pas d'instruction `rep`, mettre 0 !!
-<br>
-</p>
-<div class="scale-question-answers">
-<div class="form-group hidden scale_team_answer_id"><div class="col-sm-10"><input class="hidden form-control" id="scale_team_answer_id" name="[scale_team][answers_attributes][1][id]" type="hidden"></div></div>
-<div class="form-group hidden scale_team_answer_question_id"><div class="col-sm-10"><input class="hidden form-control" id="scale_team_answer_question_id" name="[scale_team][answers_attributes][1][question_id]" type="hidden" value="326"></div></div>
-<div class="marked-title text-center">Rate it from 0 (failed) through 5 (excellent)</div>
-<input autocomplete="off" class="star-range slided" data-star-range="" max="5" name="[scale_team][answers_attributes][1][value]" step="1" type="range" value="0" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"><div class="rangeslider" id="js-rangeslider-1"><div class="rangeslider__fill" style="width: 20px;"></div><div class="rangeslider__handle" style="left: 0px;"></div></div>
-</div>
-<h4 class="scale-question-name">Cat</h4>
-<p class="scale-section-guidelines">
-Télécharger le fichier de la correction.
-<br>
-<br>- gcc -W -Wall -Werror main.c libfts.a
-<br>- ./a.out
-<br>- taper "qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm\n" puis ^D (control +  D)
-<br>
-<br>L'affichage du binaire et du fichier main.c a fonctionné ? 
-</p>
-<div class="scale-question-answers">
-<div class="form-group hidden scale_team_answer_id"><div class="col-sm-10"><input class="hidden form-control" id="scale_team_answer_id" name="[scale_team][answers_attributes][2][id]" type="hidden"></div></div>
-<div class="form-group hidden scale_team_answer_question_id"><div class="col-sm-10"><input class="hidden form-control" id="scale_team_answer_question_id" name="[scale_team][answers_attributes][2][question_id]" type="hidden" value="327"></div></div>
-<div class="btn-group block">
-<input autocomplete="off" class="checkbox-input" id="radio_[scale_team][answers_attributes][2][value]_true" name="[scale_team][answers_attributes][2][value]" type="radio" value="1">
-<label class="btn btn-success checkbox-label light-bg" for="radio_[scale_team][answers_attributes][2][value]_true">
-<span class="icon-check"></span>
-Yes
-</label>
-<input autocomplete="off" checked="checked" class="checkbox-input" id="radio_[scale_team][answers_attributes][2][value]_false" name="[scale_team][answers_attributes][2][value]" type="radio" value="0">
-<label class="btn btn-danger checkbox-label light-bg" for="radio_[scale_team][answers_attributes][2][value]_false">
-<span class="icon-times"></span>
-No
-</label>
-</div>
-</div>
-</section>
-<section class="scale-section-item dancer from-down" id="section-164">
-<h3 class="main-title">Bonus</h3>
-<p></p>
-<h4 class="scale-question-name">Pleins de fonctions</h4>
-<p class="scale-section-guidelines">
-Mettez 1 point par fonction supplémentaire.
-</p>
-<div class="scale-question-answers">
-<div class="form-group hidden scale_team_answer_id"><div class="col-sm-10"><input class="hidden form-control" id="scale_team_answer_id" name="[scale_team][answers_attributes][3][id]" type="hidden"></div></div>
-<div class="form-group hidden scale_team_answer_question_id"><div class="col-sm-10"><input class="hidden form-control" id="scale_team_answer_question_id" name="[scale_team][answers_attributes][3][question_id]" type="hidden" value="328"></div></div>
-<div class="marked-title text-center">Rate it from 0 (failed) through 5 (excellent)</div>
-<input autocomplete="off" class="star-range slided" data-star-range="" max="5" name="[scale_team][answers_attributes][3][value]" step="1" type="range" value="0" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"><div class="rangeslider" id="js-rangeslider-2"><div class="rangeslider__fill" style="width: 20px;"></div><div class="rangeslider__handle" style="left: 0px;"></div></div>
-</div>
-</section>
-</div>
-</div>
-<div class="container-item">
-<h2 class="main-title primary">Conclusion</h2>
-<div class="on-grey">
-<div class="scale-final-evaluation hidden">
-<div class="form-group radio_buttons optional scale_team_flag"><label class="radio_buttons optional col-sm-2 control-label">Flag</label><div class="col-sm-10"><span class="radio"><label for="scale_team_flag_ok" name="scale_team[flag]"><input checked="checked" class="radio_buttons optional" id="scale_team_flag_ok" name="scale_team[flag]" type="radio" value="ok">Ok</label></span><span class="radio"><label for="scale_team_flag_empty_work" name="scale_team[flag]"><input class="radio_buttons optional" id="scale_team_flag_empty_work" name="scale_team[flag]" type="radio" value="empty_work">Empty Work</label></span><span class="radio"><label for="scale_team_flag_incomplete_work" name="scale_team[flag]"><input class="radio_buttons optional" id="scale_team_flag_incomplete_work" name="scale_team[flag]" type="radio" value="incomplete_work">Incomplete Work</label></span><span class="radio"><label for="scale_team_flag_no_author_file" name="scale_team[flag]"><input class="radio_buttons optional" id="scale_team_flag_no_author_file" name="scale_team[flag]" type="radio" value="no_author_file">No Author File</label></span><span class="radio"><label for="scale_team_flag_invalid_compilation" name="scale_team[flag]"><input class="radio_buttons optional" id="scale_team_flag_invalid_compilation" name="scale_team[flag]" type="radio" value="invalid_compilation">Invalid Compilation</label></span><span class="radio"><label for="scale_team_flag_norme" name="scale_team[flag]"><input class="radio_buttons optional" id="scale_team_flag_norme" name="scale_team[flag]" type="radio" value="norme">Norme</label></span><span class="radio"><label for="scale_team_flag_cheat" name="scale_team[flag]"><input class="radio_buttons optional" id="scale_team_flag_cheat" name="scale_team[flag]" type="radio" value="cheat">Cheat</label></span><span class="radio"><label for="scale_team_flag_crash" name="scale_team[flag]"><input class="radio_buttons optional" id="scale_team_flag_crash" name="scale_team[flag]" type="radio" value="crash">Crash</label></span></div></div>
-</div>
-<div class="scale-final-comments" id="comments-35">
-<p class="marked-title">Leave a comment on this correction</p>
-<div class="form-group text required scale_team_comment"><label class="text required col-sm-2 control-label" for="scale_team_comment"><abbr title="required">*</abbr> Comment</label><div class="col-sm-10"><textarea class="text required form-control" id="scale_team_comment" name="scale_team[comment]"></textarea></div></div>
-</div>
-<div class="scale-final-submit">
-<input class="btn btn-primary btn-block" data-disable-with="Finishing correction..." name="commit" type="submit" value="Finish correction">
-</div>
-</div>
-</div>
-</form>
-
-
-
-
-</div>
-</div>
-<div class="page-sidebar right-main-container page-sidebar-fixed-right under-main-navbar">
-<div class="app-sidebar-right" id="navbar-scale">
-<ul class="nav" role="tablist">
-<li class="dancer from-down" data-radio-item="flag">
-<h4 class="marked-title">Ratings</h4>
-<label class="active block-item label_flag_ok unpadded" for="scale_team_flag_ok" name="scale_team[flag]">
-<span class="icon-checkmark"></span>
-Ok
-</label>
-<label class="block-item label_flag_empty_work unpadded" for="scale_team_flag_empty_work" name="scale_team[flag]">
-<span class="icon-question-circle"></span>
-Empty work
-</label>
-<label class="block-item label_flag_incomplete_work unpadded" for="scale_team_flag_incomplete_work" name="scale_team[flag]">
-<span class="icon-exclamation-circle"></span>
-Incomplete work
-</label>
-<label class="block-item label_flag_no_author_file unpadded" for="scale_team_flag_no_author_file" name="scale_team[flag]">
-<span class="icon-user"></span>
-No author file
-</label>
-<label class="block-item label_flag_invalid_compilation unpadded" for="scale_team_flag_invalid_compilation" name="scale_team[flag]">
-<span class="icon-gears"></span>
-Invalid compilation
-</label>
-<label class="block-item label_flag_norme unpadded" for="scale_team_flag_norme" name="scale_team[flag]">
-<span class="icon-book"></span>
-Norme
-</label>
-<label class="block-item label_flag_cheat unpadded" for="scale_team_flag_cheat" name="scale_team[flag]">
-<span class="icon-times-circle"></span>
-Cheat
-</label>
-<label class="block-item label_flag_crash unpadded" for="scale_team_flag_crash" name="scale_team[flag]">
-<span class="icon-fire2"></span>
-Crash
-</label>
-</li>
-<li class="dancer from-down">
-<h4 class="marked-title">Presentation</h4>
-</li>
-<li class="dancer from-down">
-
-</li>
-<li class="dancer from-down">
-<a href="https://projects.intrav2.42.fr/projects/libftasm/scales/35/scale_teams/34317/edit#introduction-35">Introduction</a>
-</li>
-<li class="dancer from-down">
-
-</li>
-<li class="dancer from-down">
-<a href="https://projects.intrav2.42.fr/projects/libftasm/scales/35/scale_teams/34317/edit#guidelines-35">Guidelines</a>
-</li>
-<li class="dancer from-down">
-<a href="https://projects.intrav2.42.fr/projects/libftasm/scales/35/scale_teams/34317/edit#attachments-35">Attachments</a>
-</li>
-<li class="dancer from-down">
-<h4 class="marked-title">Sections</h4>
-</li>
-<li class="dancer from-down">
-<a href="https://projects.intrav2.42.fr/projects/libftasm/scales/35/scale_teams/34317/edit#section-164">Bonus</a>
-</li>
-<li class="dancer from-down">
-<a href="https://projects.intrav2.42.fr/projects/libftasm/scales/35/scale_teams/34317/edit#section-163">libfts</a>
-</li>
-<li class="dancer from-down">
-<h4 class="marked-title">Conclusion</h4>
-</li>
-<li class="dancer from-down">
-<a href="https://projects.intrav2.42.fr/projects/libftasm/scales/35/scale_teams/34317/edit#comments-35">Comment</a>
-</li>
+<li class="toclevel-1 tocsection-21"><a href="#Function_Calls"><span class="tocnumber">3</span> <span class="toctext">Function Calls</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Loop_Instructions"><span class="tocnumber">4</span> <span class="toctext">Loop Instructions</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Enter_and_Leave"><span class="tocnumber">5</span> <span class="toctext">Enter and Leave</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Other_Control_Instructions"><span class="tocnumber">6</span> <span class="toctext">Other Control Instructions</span></a></li>
 </ul>
 </div>
 
+<h2><span class="mw-headline" id="Comparison_Instructions">Comparison Instructions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=1" title="Edit section: Comparison Instructions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table width="100%" class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
 
+<tbody><tr>
+<td style="padding-left: 10px;"><big> <b>test</b> arg0, arg1</big>
+</td>
+<td width="75px"><small><b><a href="/wiki/X86_Assembly/GAS_Syntax" title="X86 Assembly/GAS Syntax">GAS Syntax</a></b></small>
+</td></tr>
+<tr>
+<td style="padding-left: 10px;"><big> <b>test</b> arg1, arg0</big>
+</td>
+<td><small><b><a href="/wiki/X86_Assembly/MASM_Syntax" title="X86 Assembly/MASM Syntax">Intel syntax</a></b></small>
+</td></tr></tbody></table>
+<p><br />
+Performs a bit-wise logical <code>and</code> on <code>arg0</code> and <code>arg1</code> the result of which we will refer to as <code>commonBits</code> and sets the <code>ZF</code>(zero), <code>SF</code>(sign) and <code>PF</code> (parity) flags based on <code>commonBits</code>. <code>CommonBits</code> is then discarded.
+</p><p><br />
+<b> Operands </b>
+</p><p><i>arg0</i>
+</p>
+<ul><li>Register</li>
+<li>Immediate</li></ul>
+<p><i>arg1</i>
+</p>
+<ul><li><code>AL/AX/EAX</code> (only if <code>arg0</code> is an immediate value)</li>
+<li>Register</li>
+<li>Memory</li></ul>
+<p><b> Modified flags </b>
+</p>
+<ul><li><code>SF</code>&#160;≔&#160;MostSignificantBit(<code>commonBits</code>)</li>
+<li><code>ZF</code>&#160;≔ (<code>commonBits</code> = 0), so a set <code>ZF</code> means, <code>arg0</code> and <code>arg1</code> do not have any set bits in common</li>
+<li><code>PF</code>&#160;≔&#160;BitWiseXorNor(<code>commonBits</code>[Max-1:0]), so <code>PF</code> is set if and only if <code>commonBits</code>[Max-1:0] has an even number of 1 bits</li>
+<li><code>CF</code>&#160;≔&#160;0</li>
+<li><code>OF</code>&#160;≔&#160;0</li>
+<li><code>AF</code> is undefined</li></ul>
+<p><b> Application </b>
+</p>
+<ul><li>passing the same register twice: <code>test rax, rax</code>
+<ul><li><code>SF</code> becomes the <i>sign</i> of <code>rax</code>, which is a simple test for non-negativity</li>
+<li><code>ZF</code> is set if <code>rax</code> is <i>zero</i></li>
+<li><code>PF</code> is set if <code>rax</code> has an even number of set bits</li></ul></li></ul>
+<p><br />
+</p>
+<table width="100%" class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+
+<tbody><tr>
+<td style="padding-left: 10px;"><big> <b>cmp</b> subtrahend, minuend</big>
+</td>
+<td width="75px"><small><b><a href="/wiki/X86_Assembly/GAS_Syntax" title="X86 Assembly/GAS Syntax">GAS Syntax</a></b></small>
+</td></tr>
+<tr>
+<td style="padding-left: 10px;"><big> <b>cmp</b> minuend, subtrahend</big>
+</td>
+<td><small><b><a href="/wiki/X86_Assembly/MASM_Syntax" title="X86 Assembly/MASM Syntax">Intel syntax</a></b></small>
+</td></tr></tbody></table>
+<p><br />
+Performs a comparison operation between <code>minuend</code> and <code>subtrahend</code>. The comparison is performed by a (signed) subtraction of <code>subtrahend</code> from <code>minuend</code>, the results of which can be called <code>difference</code>. <code>Difference</code> is then discarded. If <code>subtrahend</code> is an immediate value it will be sign extended to the length of <code>minuend</code>. The <code>EFLAGS</code> register is set in the same manner as a <code>sub</code> instruction.
+</p><p>Note that the GAS/AT&amp;T syntax can be rather confusing, as for example <code>cmp $0, %rax</code> followed by <code>jl branch</code> will branch if <code>%rax &lt; 0</code> (and not the opposite as might be expected from the order of the operands).
+</p><p><br />
+<b> Operands </b>
+</p><p><i>minuend</i>
+</p>
+<ul><li><code>AL/AX/EAX</code> (only if <code>subtrahend</code> is immediate)</li>
+<li>Register</li>
+<li>Memory</li></ul>
+<p><i>subtrahend</i>
+</p>
+<ul><li>Register</li>
+<li>Immediate</li>
+<li>Memory</li></ul>
+<p><br />
+<b> Modified flags </b>
+</p>
+<ul><li><code>SF</code>&#160;≔&#160;MostSignificantBit(<code>difference</code>), so a unset <code>SF</code> means the <code>difference</code> is non-negative (<code>minuend</code>&#160;≥&#160;<code>subtrahend</code> [NB: signed comparison])</li>
+<li><code>ZF</code>&#160;≔&#160;(<code>difference</code> =&#160;0)</li>
+<li><code>PF</code>&#160;≔&#160;BitWiseXorNor(<code>difference</code>[Max-1:0])</li>
+<li><code>CF</code>, <code>OF</code> and <code>AF</code></li></ul>
+<h2><span class="mw-headline" id="Jump_Instructions">Jump Instructions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=2" title="Edit section: Jump Instructions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The jump instructions allow the programmer to (indirectly) set the value of the EIP register. The location passed as the argument is usually a label. The first instruction executed after the jump is the instruction immediately following the label. All of the jump instructions, with the exception of <code>jmp</code>, are <b>conditional jumps</b>, meaning that program flow is diverted only if a condition is true. These instructions are often used after a comparison instruction (see above), but since many other instructions set flags, this order is not required.
+</p><p>See <a href="/wiki/X86_Assembly/X86_Architecture#EFLAGS_Register" title="X86 Assembly/X86 Architecture">chapter “X86 architecture”, §&#160;“EFLAGS register”</a> for more information about the flags and their meaning.
+</p>
+<h3><span class="mw-headline" id="Unconditional_Jumps">Unconditional Jumps</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=3" title="Edit section: Unconditional Jumps">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jmp</b> loc </big>
+</p>
 </div>
-<div class="right-sidebar-fix"></div>
+<p>Loads <code>EIP</code> with the specified address (i.e. the next instruction executed will be the one specified by <code>jmp</code>).
+</p>
+<h3><span class="mw-headline" id="Jump_if_Equal">Jump if Equal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=4" title="Edit section: Jump if Equal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>je</b> loc </big>
+</p>
 </div>
-<div aria-hidden="true" aria-labelledby="bugModalLabel" class="modal fade" id="smartModal" role="dialog" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<button aria-hidden="true" class="close" data-dismiss="modal" type="button">
-x
-</button>
-<h3 id="bugModalLabel">
-A bug ?
-</h3>
+<p><i>ZF = 1</i>
+</p><p>Loads <code>EIP</code> with the specified address, if operands of previous <code>cmp</code> instruction are equal.
+For example:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nf">mov</span> <span class="no">$5</span><span class="p">,</span> <span class="no">ecx</span>
+<span class="nf">mov</span> <span class="no">$5</span><span class="p">,</span> <span class="no">edx</span>
+<span class="nf">cmp</span> <span class="no">ecx</span><span class="p">,</span> <span class="no">edx</span>
+<span class="nf">je</span> <span class="no">equal</span>
+<span class="c">; if it did not jump to the label equal,</span>
+<span class="c">; then this means ecx and edx are not equal.</span>
+<span class="nl">equal:</span>
+<span class="c">; if it jumped here, then this means ecx and edx are equal</span>
+</pre></div>
+<h3><span class="mw-headline" id="Jump_if_Not_Equal">Jump if Not Equal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=5" title="Edit section: Jump if Not Equal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jne</b> loc </big>
+</p>
 </div>
-<div class="modal-body">
-<h4 class="note-title">Please wait...</h4>
+<p><i>ZF = 0</i>
+</p><p>Loads <code>EIP</code> with the specified address, if operands of previous <code>cmp</code> instruction are not equal.
+</p>
+<h3><span class="mw-headline" id="Jump_if_Greater">Jump if Greater</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=6" title="Edit section: Jump if Greater">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jg</b> loc </big>
+</p>
 </div>
-<div class="modal-footer">
-<button aria-hidden="true" class="btn" data-dismiss="modal">Cancel</button>
-<button class="send btn btn-primary">Send</button>
+<p><i>SF = OF and ZF = 0</i>
+</p><p>Loads <code>EIP</code> with the specified address, if the <code>minuend</code> of the previous <code>cmp</code> instruction is greater than the second (performs signed comparison).
+</p>
+<h3><span class="mw-headline" id="Jump_if_Greater_or_Equal">Jump if Greater or Equal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=7" title="Edit section: Jump if Greater or Equal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jge</b> loc </big>
+</p>
 </div>
+<p><i>SF = OF or ZF = 1</i>
+</p><p>Loads <code>EIP</code> with the specified address, if the <code>minuend</code> of the of previous <code>cmp</code> instruction is greater than or equal to the <code>subtrahend</code> (performs signed comparison).
+</p>
+<h3><span id="Jump_if_Above_.28unsigned_comparison.29"></span><span class="mw-headline" id="Jump_if_Above_(unsigned_comparison)">Jump if Above (unsigned comparison)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=8" title="Edit section: Jump if Above (unsigned comparison)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>ja</b> loc </big>
+</p>
 </div>
+<p><i>CF = 0 and ZF = 0</i>
+</p><p>Loads <code>EIP</code> with the specified address, if the <code>minuend</code> of the previous <code>cmp</code> instruction is greater than the <code>subtrahend</code>.
+<code>ja</code> is the same as <code>jg</code>, except that it performs an unsigned comparison.
+</p><p>That means, the following piece of code <i>always</i> jumps (unless <code>rbx</code> is <code>-1</code>, too), because negative one is represented as all bits set in the two's complement.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nf">mov</span> <span class="no">rax</span><span class="p">,</span> <span class="p">-</span><span class="mi">1</span> <span class="err">//</span> <span class="no">rax</span> <span class="p">:</span><span class="err">=</span> <span class="p">-</span><span class="mi">1</span>
+<span class="nf">cmp</span> <span class="no">rax</span><span class="p">,</span> <span class="no">rbx</span>
+<span class="nf">ja</span> <span class="no">loc</span>
+</pre></div>
+<p>Interpreting all bits set (without treating any bit as the sign) has the value 2ⁿ-1 (where n is the length of the register).
+That is the largest unsigned value a register can hold.
+</p>
+<h3><span id="Jump_if_Above_or_Equal_.28unsigned_comparison.29"></span><span class="mw-headline" id="Jump_if_Above_or_Equal_(unsigned_comparison)">Jump if Above or Equal (unsigned comparison)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=9" title="Edit section: Jump if Above or Equal (unsigned comparison)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jae</b> loc </big>
+</p>
 </div>
+<p><i>CF = 0 or ZF = 1</i>
+</p><p>Loads <code>EIP</code> with the specified address, if the <code>minuend</code> of previous <code>cmp</code> instruction is greater than or equal to the <code>subtrahend</code>.
+<code>jae</code> is the same as <code>jge</code>, except that it performs an unsigned comparison.
+</p>
+<h3><span class="mw-headline" id="Jump_if_Lesser">Jump if Lesser</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=10" title="Edit section: Jump if Lesser">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jl</b> loc </big>
+</p>
+</div>
+<p>The criterion required for a <code>jl</code> is that <code>SF</code>&#160;≠&#160;<code>OF</code>.
+It loads <code>EIP</code> with the specified address, if the criterion is met.
+So either <code>SF</code> or <code>OF</code> can be set, but not both in order to satisfy this criterion.
+If we take the <code>sub</code> (which is <i>basically</i> what a <code>cmp</code> does) instruction as an example, we have:
+</p>
+<dl><dd><code>minuend</code>&#160;-&#160;<code>subtrahend</code></dd></dl>
+<p>With respect to <code>sub</code> and <code>cmp</code> there are several cases that fulfill this criterion:
+</p>
+<ol><li><code>minuend</code> &lt; <code>subtrahend</code> and the operation does not have overflow</li>
+<li><code>minuend</code> &gt; <code>subtrahend</code> and the operation has an overflow</li></ol>
+<p><br />
+In the first case <code>SF</code> will be set but not <code>OF</code> and in second case <code>OF</code> will be set but not <code>SF</code> since the overflow will reset the most significant bit to zero and thus preventing <code>SF</code> being set.
+The <code>SF</code>&#160;≠&#160;<code>OF</code> criterion avoids the cases where:
+</p>
+<ol><li><code>minuend</code>&#160;&gt;&#160;<code>subtrahend</code> and the operation does not have overflow</li>
+<li><code>minuend</code>&#160;&lt;&#160;<code>subtrahend</code> and the operation has an overflow</li>
+<li><code>minuend</code>&#160;=&#160;<code>subtrahend</code></li></ol>
+<p>In the first case neither <code>SF</code> nor <code>OF</code> are set, in the second case <code>OF</code> will be set and <code>SF</code> will be set since the overflow will reset the most significant bit to one and in the last case neither <code>SF</code> nor <code>OF</code> will be set.
+</p>
+<h3><span class="mw-headline" id="Jump_if_Less_or_Equal">Jump if Less or Equal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=11" title="Edit section: Jump if Less or Equal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jle</b> loc </big>
+</p>
+</div>
+<p><code>SF</code>&#160;≠&#160;<code>OF</code> or <code>ZF = 1</code>. 
+</p><p>Loads <code>EIP</code> with the specified address, if the <code>minuend</code> of previous <code>cmp</code> instruction is lesser than or equal to the <code>subtrahend</code>.
+See the <a href="#Jump_if_Lesser"><code>jl</code> section</a> for a more detailed description of the criteria.
+</p>
+<h3><span id="Jump_if_Below_.28unsigned_comparison.29"></span><span class="mw-headline" id="Jump_if_Below_(unsigned_comparison)">Jump if Below (unsigned comparison)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=12" title="Edit section: Jump if Below (unsigned comparison)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jb</b> loc </big>
+</p>
+</div>
+<p><i>CF = 1</i>
+</p><p>Loads EIP with the specified address, if first operand of previous CMP instruction is lesser than the second. <code>jb</code> is the same as <code>jl</code>, except that it performs an unsigned comparison.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nf">mov</span> <span class="no">rax</span><span class="p">,</span> <span class="mi">0</span>   <span class="c">; rax&#160;≔&#160;0</span>
+<span class="no">cmp</span> <span class="no">rax</span><span class="p">,</span> <span class="no">rbx</span> <span class="c">; rax&#160;≟&#160;rbx</span>
+<span class="no">jb</span> <span class="no">loc</span>       <span class="c">; always jumps, unless rbx is also 0</span>
+</pre></div>
+<h3><span id="Jump_if_Below_or_Equal_.28unsigned_comparison.29"></span><span class="mw-headline" id="Jump_if_Below_or_Equal_(unsigned_comparison)">Jump if Below or Equal (unsigned comparison)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=13" title="Edit section: Jump if Below or Equal (unsigned comparison)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jbe</b> loc </big>
+</p>
+</div>
+<p><i>CF = 1 or ZF = 1</i>
+</p><p>Loads EIP with the specified address, if <code>minuend</code> of previous <code>cmp</code> instruction is lesser than or equal to the <code>subtrahend</code>.
+<code>jbe</code> is the same as <code>jle</code>, except that it performs an unsigned comparison.
+</p>
+<h3><span class="mw-headline" id="Jump_if_Overflow">Jump if Overflow</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=14" title="Edit section: Jump if Overflow">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jo</b> loc </big>
+</p>
+</div>
+<p><i>OF = 1</i>
+</p><p>Loads <code>EIP</code> with the specified address, if the overflow bit is set on a previous arithmetic expression.
+</p>
+<h3><span class="mw-headline" id="Jump_if_Not_Overflow">Jump if Not Overflow</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=15" title="Edit section: Jump if Not Overflow">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jno</b> loc </big>
+</p>
+</div>
+<p><i>OF = 0</i>
+</p><p>Loads <code>EIP</code> with the specified address, if the overflow bit is not set on a previous arithmetic expression.
+</p>
+<h3><span class="mw-headline" id="Jump_if_Zero">Jump if Zero</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=16" title="Edit section: Jump if Zero">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jz</b> loc </big>
+</p>
+</div>
+<p><i>ZF = 1</i>
+</p><p>Loads <code>EIP</code> with the specified address, if the zero bit is set from a previous arithmetic expression.
+<code>jz</code> is identical to <code>je</code>.
+</p>
+<h3><span class="mw-headline" id="Jump_if_Not_Zero">Jump if Not Zero</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=17" title="Edit section: Jump if Not Zero">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jnz</b> loc </big>
+</p>
+</div>
+<p><i>ZF = 0</i>
+</p><p>Loads <code>EIP</code> with the specified address, if the zero bit is not set from a previous arithmetic expression.
+<code>jnz</code> is identical to <code>jne</code>.
+</p>
+<h3><span class="mw-headline" id="Jump_if_Signed">Jump if Signed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=18" title="Edit section: Jump if Signed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>js</b> loc </big>
+</p>
+</div>
+<p><i>SF = 1</i>
+</p><p>Loads <code>EIP</code> with the specified address, if the sign bit is set from a previous arithmetic expression.
+</p>
+<h3><span class="mw-headline" id="Jump_if_Not_Signed">Jump if Not Signed</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=19" title="Edit section: Jump if Not Signed">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jns</b> loc </big>
+</p>
+</div>
+<p><i>SF = 0</i>
+</p><p>Loads <code>EIP</code> with the specified address, if the sign bit is not set from a previous arithmetic expression.
+</p>
+<h3><span class="mw-headline" id="Jump_if_counter_register_is_zero">Jump if counter register is zero</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=20" title="Edit section: Jump if counter register is zero">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jcxz</b> loc </big>
+</p>
+</div>
+<p><i>CX = 0</i>
+</p>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jecxz</b> loc </big>
+</p>
+</div>
+<p><i>ECX = 0</i>
+</p>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>jrcxz</b> loc </big>
+</p>
+</div>
+<p><i>RCX = 0</i>
+</p><p>Loads <code>EIP</code> with the specified address, the counter register is zero.
+</p>
+<h2><span class="mw-headline" id="Function_Calls">Function Calls</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=21" title="Edit section: Function Calls">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>call</b> proc </big>
+</p>
+</div>
+<p>Pushes the address of the instruction that follows the <code>call</code> call, i.e. usually the next line in your source code, onto the top of the stack, and then jumps to the specified location.
+This is used mostly for subroutines.
+</p>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>ret</b> [val] </big>
+</p>
+</div>
+<p>Loads the next value on the stack into <code>EIP</code>, and then pops the specified number of bytes off the stack.
+If <code>val</code> is not supplied, the instruction will not pop any values off the stack after returning.
+</p>
+<h2><span class="mw-headline" id="Loop_Instructions">Loop Instructions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=22" title="Edit section: Loop Instructions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>loop</b> arg </big>
+</p>
+</div>
+<p>The <code>loop</code> instruction decrements <code>ECX</code> and jumps to the address specified by <code>arg</code> unless decrementing <code>ECX</code> caused its value to become zero.
+For example:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>	<span class="nf">mov</span> <span class="no">ecx</span><span class="p">,</span> <span class="mi">5</span> <span class="c">; ecx ≔ 5</span>
+<span class="no">head</span><span class="p">:</span>
+	<span class="c">; the code here would be executed 5 times</span>
+	<span class="nf">loop</span> <span class="no">head</span>
+</pre></div>
+<p><code>loop</code> does not set any flags.
+</p>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>loopcc</b> arg </big>
+</p>
+</div>
+<p>These loop instructions decrement <code>ECX</code> and jump to the address specified by <code>arg</code> if their condition is satisfied (that is, a specific flag is set), unless decrementing <code>ECX</code> caused its value to become zero.
+</p>
+<ul><li><code>loope</code>  loop if equal</li>
+<li><code>loopne</code> loop if not equal</li>
+<li><code>loopnz</code> loop if not zero</li>
+<li><code>loopz</code>  loop if zero</li></ul>
+<p>That way, only testing for a non-zero <code>ECX</code> can be combined with testing <code>ZF</code>.
+Other flags can not be tested for, say there is no <code>loopnc</code> “loop while <code>ECX</code>&#160;≠&#160;0 and <code>CF</code> unset”.
+</p>
+<h2><span class="mw-headline" id="Enter_and_Leave">Enter and Leave</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=23" title="Edit section: Enter and Leave">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>enter</b> arg </big>
+</p>
+</div>
+<p><code>enter</code> creates a stack frame with the specified amount of space allocated on the stack.
+</p>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>leave</b> </big>
+</p>
+</div>
+<p><code>leave</code> destroys the current stack frame, and restores the previous frame.
+Using Intel syntax this is equivalent to:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nf">mov</span> <span class="no">esp</span><span class="p">,</span> <span class="no">ebp</span> <span class="c">; esp ≔ ebp</span>
+<span class="no">pop</span> <span class="no">ebp</span>
+</pre></div>
+<p>This will set <code>EBP</code> and <code>ESP</code> to their respective value before the function prologue began therefore reversing any modification to the stack that took place during the prologue.
+</p>
+<h2><span class="mw-headline" id="Other_Control_Instructions">Other Control Instructions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit&amp;section=24" title="Edit section: Other Control Instructions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>hlt</b> </big>
+</p>
+</div>
+<p>Halts the processor.
+Execution will be resumed after processing next hardware interrupt, unless <code>IF</code> is cleared.
+</p>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>nop</b> </big>
+</p>
+</div>
+<p>No operation.
+This instruction doesn't do anything, but wastes (an) instruction cycle(s) in the processor.
+</p><p>This instruction is often <i>represented</i> as an <code>xchg</code> operation with the operands <code>EAX</code> and <code>EAX</code> (an operation without side-effects), because there is no designated opcode for doing nothing.
+This just as a passing remark, so that you do not get confused with <i>disassembled</i> code.
+</p>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>lock</b> </big>
+</p>
+</div>
+<p>Asserts #LOCK prefix on next instruction.
+</p>
+<div class="PrettyTextBox" style="padding-left: 10px; padding-top: 2px; padding-bottom: 2px; float: center; clear: both;">
+<p><big> <b>wait</b> </big>
+</p>
+</div>
+<p>Waits for the FPU to finish its last calculation.
+</p>
+<!-- 
+NewPP limit report
+Parsed by mw1347
+Cached time: 20190713132904
+Cache expiry: 2592000
+Dynamic content: false
+Complications: []
+CPU time usage: 0.112 seconds
+Real time usage: 0.148 seconds
+Preprocessor visited node count: 613/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 8746/2097152 bytes
+Template argument size: 931/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3021/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.017/10.000 seconds
+Lua memory usage: 813 KB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   87.435      1 -total
+ 49.55%   43.323      1 Template:X86_Assembly_Page
+ 44.76%   39.140      1 Template:BookCat
+ 21.26%   18.588      1 Template:Wikipedia
+ 18.22%   15.928      1 Template:Mbox-side
+ 14.14%   12.363      1 Template:Sec_link_auto
+ 12.79%   11.180      1 Template:Evalx
+ 12.09%   10.572      2 Template:X86-inst-2
+  6.43%    5.619      2 Template:X86-inst-2x
+  6.23%    5.447      1 Template:BOOKCATEGORY
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:51941-0!canonical and timestamp 20190713132906 and revision id 3557431
+ -->
+</div><noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikibooks.org/w/index.php?title=X86_Assembly/Control_Flow&amp;oldid=3557431">https://en.wikibooks.org/w/index.php?title=X86_Assembly/Control_Flow&amp;oldid=3557431</a>"</div>
+		
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Book:X86_Assembly" title="Category:Book:X86 Assembly">Book:X86 Assembly</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
 </div>
 
-<div class="notifications-container"></div>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  
-  ga('create', "UA-55986469-3", 'auto');
-  
-  ga('send', 'pageview');
-</script>
-<script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-56406133-1']);
-  _gaq.push(['_setDomainName', 'intrav2.42.fr']);
-  _gaq.push(['_trackPageview']);
-</script>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Discussion for this IP address</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=X86+Assembly%2FControl+Flow" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=X86+Assembly%2FControl+Flow" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/wiki/X86_Assembly/Control_Flow" title="View the content page [c]" accesskey="c">Book</a></span></li><li id="ca-talk"><span><a href="/wiki/Talk:X86_Assembly/Control_Flow" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<ul class="menu">
+													</ul>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible"><span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;stable=1">Read</a></span></li><li id="ca-current" class="collapsible selected"><span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;stable=0&amp;redirect=no" title="View this page with the pending changes [v]" accesskey="v">Latest draft</a></span></li><li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></span></li><li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<ul class="menu">
+													</ul>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search Wikibooks" title="Search Wikibooks [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-Navigation" aria-labelledby="p-Navigation-label">
+			<h3 id="p-Navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main Page</a></li><li id="n-help"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks">Help</a></li><li id="n-Browse"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer">Browse</a></li><li id="n-Cookbook"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world">Cookbook</a></li><li id="n-Wikijunior"><a href="/wiki/Wikijunior" title="Books for children">Wikijunior</a></li><li id="n-Featured-books"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks">Featured books</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks">Donations</a></li><li id="n-randomrootpage"><a href="/wiki/Special:RandomInCategory/Book:Wikibooks_Stacks/Books">Random book</a></li><li id="n-Using-Wikibooks"><a href="/wiki/Using_Wikibooks">Using Wikibooks</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Community" aria-labelledby="p-Community-label">
+			<h3 id="p-Community-label">Community</h3>
+			<div class="body">
+								<ul>
+					<li id="n-Reading-room"><a href="/wiki/Wikibooks:Reading_room" title="Discuss Wikibooks-related questions and concerns with others">Reading room</a></li><li id="n-portal"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community">Community portal</a></li><li id="n-currentevents"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news">Bulletin Board</a></li><li id="n-maintenance"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with">Help out!</a></li><li id="n-Policies-and-guidelines"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures">Policies and guidelines</a></li><li id="n-contact"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication">Contact us</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/X86_Assembly/Control_Flow" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/X86_Assembly/Control_Flow" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=en" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;oldid=3557431" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=X86_Assembly%2FControl_Flow&amp;id=3557431" title="Information on how to cite this page">Cite this page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">In other languages</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-fr"><a href="https://fr.wikibooks.org/wiki/Programmation_Assembleur_x86/Les_branchements" title="Programmation Assembleur x86/Les branchements – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li>				</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:NewItem?site=enwikibooks&amp;page=X86+Assembly%2FControl+Flow" title="Add interlanguage links" class="wbc-editpage">Add links</a></span></div>			</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Sister_projects" aria-labelledby="p-Sister_projects-label">
+			<h3 id="p-Sister_projects-label">Sister projects</h3>
+			<div class="body">
+								<ul>
+					<li id="n-Wikipedia"><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li><li id="n-Wikiversity"><a href="https://en.wikiversity.org/wiki/Wikiversity:Main_Page">Wikiversity</a></li><li id="n-Wiktionary"><a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page">Wiktionary</a></li><li id="n-Wikiquote"><a href="https://en.wikiquote.org/wiki/Main_Page">Wikiquote</a></li><li id="n-Wikisource"><a href="https://en.wikisource.org/wiki/Main_Page">Wikisource</a></li><li id="n-Wikinews"><a href="https://en.wikinews.org/wiki/Main_Page">Wikinews</a></li><li id="n-Wikivoyage"><a href="https://en.wikivoyage.org/wiki/Main_Page">Wikivoyage</a></li><li id="n-Commons"><a href="https://commons.wikimedia.org/wiki/Main_Page">Commons</a></li><li id="n-Wikidata"><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Print/export</h3>
+			<div class="body">
+								<ul>
+					<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=X86+Assembly%2FControl+Flow">Create a collection</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=X86+Assembly%2FControl+Flow&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=X86_Assembly/Control_Flow&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 13 July 2019, at 13:29.</li>
+								<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike License.</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome" title="Wikibooks:Welcome">About Wikibooks</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/Wikibooks:General_disclaimer" title="Wikibooks:General disclaimer">Disclaimers</a></li>
+								<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+								<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+								<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/w/index.php?title=X86_Assembly/Control_Flow&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
 
-<div class="hide" data-cache="true"></div>
-<footer></footer>
-
-
-
-
-<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 1px; height: 1px; z-index: 999999999;"><object id="global-zeroclipboard-flash-bridge" name="global-zeroclipboard-flash-bridge" width="100%" height="100%" type="application/x-shockwave-flash" data="https://projects.intrav2.42.fr/assets/clipboard-8d300934b0e6dbff620155650e9246a4.swf?noCache=1426772907533"><param name="allowScriptAccess" value="sameDomain"><param name="allowNetworking" value="all"><param name="menu" value="false"><param name="wmode" value="transparent"><param name="flashvars" value="trustedOrigins=projects.intrav2.42.fr%2C%2F%2Fprojects.intrav2.42.fr%2Chttps%3A%2F%2Fprojects.intrav2.42.fr&amp;swfObjectId=global-zeroclipboard-flash-bridge&amp;jsVersion=2.2.0"><div id="global-zeroclipboard-flash-bridge_fallbackContent">&nbsp;</div></object></div></body></html>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.112","walltime":"0.148","ppvisitednodes":{"value":613,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":8746,"limit":2097152},"templateargumentsize":{"value":931,"limit":2097152},"expansiondepth":{"value":11,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3021,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%   87.435      1 -total"," 49.55%   43.323      1 Template:X86_Assembly_Page"," 44.76%   39.140      1 Template:BookCat"," 21.26%   18.588      1 Template:Wikipedia"," 18.22%   15.928      1 Template:Mbox-side"," 14.14%   12.363      1 Template:Sec_link_auto"," 12.79%   11.180      1 Template:Evalx"," 12.09%   10.572      2 Template:X86-inst-2","  6.43%    5.619      2 Template:X86-inst-2x","  6.23%    5.447      1 Template:BOOKCATEGORY"]},"scribunto":{"limitreport-timeusage":{"value":"0.017","limit":"10.000"},"limitreport-memusage":{"value":832444,"limit":52428800}},"cachereport":{"origin":"mw1347","timestamp":"20190713132904","ttl":2592000,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":96,"wgHostname":"mw1323"});});</script>
+</body>
+</html>
