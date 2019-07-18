@@ -3,12 +3,12 @@ section .text
 	extern _ft_memset
 	extern _malloc
 
-_ft_memalloc:		; void *ft_memalloc(size_t size)
+_ft_memalloc:			; void *ft_memalloc(size_t size)
 	push rbp
 	mov rbp, rsp
-	sub rsp, 32		; save 32 bits in function scope on stack
+	sub rsp, 32			; save 32 bits in function scope on stack
 
-	mov [rsp], rdi	; stock size in stack from function scope
+	mov [rsp], rdi		; stock size in stack from function scope
 
 	call _malloc
 	cmp rax, 0

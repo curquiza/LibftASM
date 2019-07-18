@@ -7,6 +7,7 @@ section .text
 _concat_len:	; concat_len(char *s1, char *s2)
 	push rbp
 	mov rbp, rsp
+
 	sub rsp, 64
 
 	mov [rsp], rsi			; save s2

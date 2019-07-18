@@ -4,7 +4,7 @@
 section .text
 	global _ft_isascii
 
-_ft_isascii:		; ft_isascii(int c)
+_ft_isascii:		; int ft_isascii(int c)
 	push rbp
 	mov rbp, rsp
 

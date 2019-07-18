@@ -4,7 +4,7 @@
 section .text
 	global _ft_isalpha
 
-_ft_isalpha:		; ft_isalpha(int c)
+_ft_isalpha:		; int ft_isalpha(int c)
 	push rbp
 	mov rbp, rsp
 

@@ -13,7 +13,7 @@ section .text
 	global _ft_puts
 	extern _ft_strlen
 
-_ft_write:		; ft_write(char *s, int len)
+_ft_write:				; ft_write(char *s, int len)
 	mov rdx, rsi		; 3eme: len
 	mov rsi, rdi		; 2nd: str
 	mov rdi, STDOUT		; 1er: stdout
@@ -65,6 +65,6 @@ _ft_puts:		; int ft_puts(char *str)
 		jmp .end
 
 	.end:
-		mov rsp, rbp	; Restore the stack and rbp
+		mov rsp, rbp		; Restore the stack and rbp
 		pop rbp
 		ret

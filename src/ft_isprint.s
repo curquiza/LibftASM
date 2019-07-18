@@ -4,7 +4,7 @@
 section .text
 	global _ft_isprint
 
-_ft_isprint:		; ft_isprint(int c)
+_ft_isprint:		; int ft_isprint(int c)
 	push rbp
 	mov rbp, rsp
 

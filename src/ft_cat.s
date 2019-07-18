@@ -21,7 +21,7 @@ _ft_cat:				; void ft_cat(int fd)
 
 	.read_loop:
 		mov rdi, [rsp]					; fd
-		lea rsi, [rel buff]					; buff
+		lea rsi, [rel buff]				; buff
 		mov rdx, buffsize				; buffsize
 		mov rax, MACH_SYSCALL(READ)		; read
 		syscall
@@ -30,7 +30,7 @@ _ft_cat:				; void ft_cat(int fd)
 		jle .end						; leave loop
 
 		mov rdi, STDOUT					; fd
-		lea rsi, [rel buff]					; buff
+		lea rsi, [rel buff]				; buff
 		mov rdx, rax					; read return
 		mov rax, MACH_SYSCALL(WRITE)	; write
 		syscall

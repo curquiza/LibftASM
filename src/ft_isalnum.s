@@ -6,7 +6,7 @@ section .text
 	extern _ft_isalpha
 	extern _ft_isdigit
 
-_ft_isalnum:		; ft_isalnum(int c)
+_ft_isalnum:		; int ft_isalnum(int c)
 	push rbp
 	mov rbp, rsp
 

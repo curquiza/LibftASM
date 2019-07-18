@@ -1,7 +1,7 @@
 section .text
 	global _ft_memset
 
-_ft_memset:		; void *ft_memset(void *b, int c, size_t len);
+_ft_memset:			; void *ft_memset(void *b, int c, size_t len);
 	push rbp
 	mov rbp, rsp
 

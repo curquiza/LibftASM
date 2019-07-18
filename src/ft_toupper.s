@@ -1,7 +1,7 @@
 section .text
 	global _ft_toupper
 
-_ft_toupper:		; ft_toupper(int c)
+_ft_toupper:		; int ft_toupper(int c)
 	push rbp
 	mov rbp, rsp
 
