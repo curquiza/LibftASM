@@ -5,7 +5,7 @@ _ft_atoi:		; int ft_atoi(const char *str)
 	push rbp
 	mov rbp, rsp
 
-	sub rsp, 128				; save 128bits in function scope
+	sub rsp, 64				; save 64bits in function scope
 
 	mov rax, 0					; rslt = 0
 	mov rcx, 1					; neg = 1
@@ -25,13 +25,13 @@ _ft_atoi:		; int ft_atoi(const char *str)
 		je .inc
 		jmp .check_sign_minus
 		.inc:
-			inc rdi
+			inc rdi					; str++
 			jmp .skip_blank
 
 	.check_sign_minus:
 		cmp byte[rdi], '-'
 		jne .check_sign_plus
-		mov rcx, -1
+		mov rcx, -1					; neg = -1
 		inc rdi
 		jmp .calc_loop
 

@@ -4,5 +4,6 @@ a.out
 libfts.a
 asm_tests
 c_tests
+c_cat_tests
 .DS_Store
 .vscode/*
