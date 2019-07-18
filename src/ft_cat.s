@@ -26,8 +26,9 @@ _ft_cat:				; void ft_cat(int fd)
 		mov rax, MACH_SYSCALL(READ)		; read
 		syscall
 
-		cmp rax, 0						; if read return <= 0
-		jle .end						; leave loop
+		jc .end							; if read return == -1 (CARRY = 1); leave
+		cmp rax, 0
+		je .end
 
 		mov rdi, STDOUT					; fd
 		lea rsi, [rel buff]				; buff
@@ -35,8 +36,7 @@ _ft_cat:				; void ft_cat(int fd)
 		mov rax, MACH_SYSCALL(WRITE)	; write
 		syscall
 
-		cmp rax, -1						; if write return == -1
-		je .end							; leave loop
+		jc .end							; if write return == -1 (CARRY = 1); leave
 
 		lea rdi, [rel buff]
 		mov rsi, buffsize
@@ -45,6 +45,6 @@ _ft_cat:				; void ft_cat(int fd)
 		jmp .read_loop
 
 	.end:
-		mov rsp, rbp			; Restore scope
+		mov rsp, rbp					; Restore scope
 		pop rbp
 		ret
