@@ -45,15 +45,14 @@ _ft_puts:		; int ft_puts(char *str)
 		mov rsi, rax		; write str
 		call _ft_write
 
-		cmp rax, -1			; check return of write
-		je .failure
+		jc .failure			; check return of write (if CF = 1)
 
 		mov rsi, 1			; write newline
 		lea rdi, [rel .newline_str]
 		call _ft_write
 
-		cmp rax, -1			; check return of write
-		je .failure
+		jc .failure			; check return of write (if CF = 1)
+
 		jmp .success
 
 	.success:
